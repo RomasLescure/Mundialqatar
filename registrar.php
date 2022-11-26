@@ -11,6 +11,7 @@
     <form action='registro.php' method='POST' name='formulario'>
         Nombre: <input type='text' name='nombre'><br><br>
         Contraseña: <input type='text' name='apellido'><br><br>
+        Tipo de usuario: 
         <input type='submit' name='botonGuardar' value='guardar'>
     </form>
 </body>

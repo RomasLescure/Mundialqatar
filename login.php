@@ -10,7 +10,7 @@
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $usuario = $_POST["usuario"];
         $contraseña = $_POST["contraseña"];
-        $sql = "SELECT * FROM usuarios WHERE usuaeio = '$usuario' AND contraseña = '$contraseña'";
+        $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND contraseña = '$contraseña'";
         $result = $con_db -> query($sql);
         if($result -> num_rows > 0){
             $_SESSION["usuario"] = $usuario;
@@ -32,15 +32,23 @@
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
-    <form action="login.php" method="post">
-        <label for="nombre">Usuario</label>
-        <input type="text" name="usuario" placeholder="nombre" require>
-        <br><br>
-        <label for="apellido">Contraseña</label>
-        <input type="text" name="contraseña" placeholder="Contraseña" require>
-        <br><br>
-        <input type="submit" value="conectar">
-    </form>
+    <div class="card text-white bg-primary mb-3" style="">
+        <div class="card-header">Inicio de sesión</div>
+        <div class="card-body">
+        <form action="login.php" method="post">
+            <fieldset>
+                <div class="form-group">
+                    <label for="usuario" class="form-label mt-4">Usuario</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="usuario" placeholder="Insertar usuario">
+                </div>
+                <label for="apellido">Contraseña</label>
+                <input type="text" name="contraseña" placeholder="Contraseña" require>
+                <br><br>
+                <input type="submit" value="conectar">
+            </fieldset>
+        </form>
+        </div>
+    </div>
     <br><br>
     <a href="registrar.php"><button>registrar</button></a>
 </body>
