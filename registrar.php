@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +7,6 @@
     <title>Registro con Base de Datos</title>
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
-
 <body>
     <form action='registro.php' method='POST' name='formulario'>
         Nombre: <input type='text' name='nombre'><br><br>
