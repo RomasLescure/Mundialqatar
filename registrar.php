@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro con Base de Datos</title>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 
 <body>
@@ -39,6 +41,7 @@
           </div>
         </div>
     </nav>
+<div class="animate__animated animate__fadeInUp">
 <div class="card text-white bg-dark mx-auto" style="max-width: 40em; margin-top:100px;">
         <div class="card-header">Registrar usuario</div>
         <div class="card-body">
@@ -74,6 +77,7 @@
             </form>
         </div>
     </div>
+</div>
 </body>
 <style>
 body { 
