@@ -25,7 +25,7 @@
             <a class="nav-link" href="equipos.php">Equipos</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Resultados</a>
+            <a class="nav-link active" href="#">Resultados</a>
             <span class="visually-hidden">(current)</span>
           </li>
           <li class="nav-item">
@@ -47,7 +47,7 @@
   <h1 style="margin-left: 20px">Resultados de partidos</h1>
   <form action="Resultados.php" method="post">
     <label for="fecha" style="margin-left: 20px">Buscar partidos por fecha:</label>
-    <input type="date" id="fecha" name="fechaform" value="2022-11-29" min="2022-11-20" max="2022-12-18">
+    <input type="date" id="fecha" name="fechaform" min="2022-11-20" max="2022-12-18">
     <input type="submit" value="Buscar">
   </form>
 

@@ -3,7 +3,7 @@ session_start();
 $db_host = 'localhost';
 $db_user = 'root';
 $db_password = '';
-$db_db = 'qatar_2022';
+$db_db = 'datos_mundial';
 
 $con_db = mysqli_connect($db_host, $db_user, $db_password, $db_db);
 
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a class="nav-link" href="#">Favoritos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Clasificaciones</a>
+            <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
           </li>
         </ul>
       </div>
