@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,7 @@
     <title>Registro con Base de Datos</title>
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
@@ -41,32 +42,36 @@
 <div class="card text-white bg-dark mx-auto" style="max-width: 40em; margin-top:100px;">
         <div class="card-header">Registrar usuario</div>
         <div class="card-body">
-        <form action="login.php" method="post">
-            <fieldset>
-                <div class="form-group">
-                    <label for="usuario" class="form-label mt-4">Usuario</label>
-                    <input type="text" class="form-control" name="usuario" placeholder="Insertar usuario">
-                </div>
-                <div class="form-group">
-                    <label for="contraseña" class="form-label mt-4">Contraseña</label>
-                    <input type="password" class="form-control" name="contraseña" placeholder="Insertar Contraseña">
-                </div>
-                 <!-- Dependiendo del tipo de usuario se lleva a una pagina u a otra -->
-                <div class="form-group">
-                    <label for="exampleSelect1" class="form-label mt-4">Tipo de usuario</label>
-                    <select class="form-select" name="Tipo_Usuario">
+            <form action="registro.php" method="post">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="user" class="form-label mt-4">Usuario</label>
+                        <input type="text" class="form-control" name="user" placeholder="Insertar Usuario">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass" class="form-label mt-4">Contraseña</label>
+                        <input type="password" class="form-control" name="pass" placeholder="Insertar Contraseña">
+                    </div>
+                    <!-- Dependiendo del tipo de usuario se lleva a una pagina u a otra -->
+                    <div class="form-group">
+                        <label for="exampleSelect1" class="form-label mt-4">Tipo de usuario</label>
                         <!-- Si es predeterminado se registra automaticamente -->
-                        <option>Predeterminado</option>
+                        <br><input type="radio" value="pred" id="pred" name="tipo">
+                        <label for="pred">Opcion Predeterminado</label>
                         <!-- Si es Administrativo se debe llevar a una pagina en la cual debe colocar
                         una contraseña que solo los administrativos saben osea nosotros, elijan ustedes la 
                         contraseña -->
-                        <option>Administrativo</option>
-                    </select>
-                </div>
-                <br>
-                <input type="submit" value="Registrarse">
-            </fieldset>
-        </form>
+                        <br><input type="radio" value="admin" id="admin" name="tipo">
+                        <label for="admin">Opcion Administrativo</label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="adminPass" class="form-label mt-4">Contraseña administrativa</label>
+                        <input type="text" class="form-control" name="adminPass" placeholder="Insertar Contraseña">
+                    </div>
+                    <input type="submit" value="Registrarse">
+                </fieldset>
+            </form>
         </div>
     </div>
 </body>

@@ -1,29 +1,30 @@
 <?php
-    session_start();
-    $db_host = 'localhost';
-    $db_user = 'root';
-    $db_password ='';
-    $db_db = 'qatar_2022';
+session_start();
+$db_host = 'localhost';
+$db_user = 'root';
+$db_password = '';
+$db_db = 'qatar_2022';
 
-    $con_db = mysqli_connect($db_host, $db_user, $db_password, $db_db);
-    
-    if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        $usuario = $_POST["usuario"];
-        $contraseña = $_POST["contraseña"];
-        $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND contraseña = '$contraseña'";
-        $result = $con_db -> query($sql);
-        if ($result -> num_rows > 0){
-            $_SESSION["usuario"] = $usuario;
-            header("location: inicio.php");
-        }else{
-            echo "nombre o contraseña invalidos";
-        }
+$con_db = mysqli_connect($db_host, $db_user, $db_password, $db_db);
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $user = $_POST["user"];
+    $pass = $_POST["pass"];
+    $sql = "SELECT * FROM usuarios WHERE user = '$user' AND pass = '$pass'";
+    $result = $con_db->query($sql);
+    if ($result->num_rows > 0) {
+        $_SESSION["user"] = $user;
+        header("location: inicio.php");
+    } else {
+        echo "Usuario o contraseña invalidos";
     }
+}
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,6 +32,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
+
 <body>
     <div class="card text-white bg-primary mx-auto" style="max-width: 40em; margin-top:100px;">
         <div class="card-header">Inicio de sesión</div>
