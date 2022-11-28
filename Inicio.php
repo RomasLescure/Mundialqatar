@@ -43,23 +43,28 @@
           </div>
         </div>
       </nav>
-  <div class="animate__animated animate__fadeInUp d-inline-flex">
-  <div class="card border-dark" style="max-width: 20rem;">
-  <div class="card-header">CARD  1</div>
+  
+<div class="d-flex justify-content-between">
+
+  <div class="animate__animated animate__fadeInUp">
+  <div class="card border-dark" style="max-width: 20rem; margin: 250px 0px 0px 80px">
+  <div class="card-header">FIFA WORLD CUP</div>
   <div class="card-body">
-    <h4 class="card-title">QATAR 2022</h4>
-    <p class="card-text">Hola feliz mundial</p>
-  </div>
-</div>
-</div>
-<div class="animate__animated animate__fadeInUp d-inline-flex mr-auto">
-  <div class="card border-dark" style="max-width: 20rem;">
-  <div class="card-header">CARD 2</div>
+    <h4 class="card-title">¡LLEGÓ QATAR 2022!</h4>
+    <p class="card-text">El Mundial Qatar 2022 se está llevando a cabo de noviembre a diciembre.
+      Se trata del torneo que paraliza al planeta y que hace que solo se hable de fútbol durante un
+      mes en todos los rincones de cada uno de los países participantes.</p>
+  </div></div></div>
+  
+  <div class="animate__animated animate__fadeInUp">
+  <div class="card border-dark" style="max-width: 20rem; margin: 250px 80px 0px 0px">
+  <div class="card-header">QATAR 2022</div>
   <div class="card-body">
-    <h4 class="card-title">QATAR 2022</h4>
-    <p class="card-text">Hola feliz mundial</p>
-  </div>
-</div>
+    <h4 class="card-title">¿ESTÁS LISTO?</h4>
+    <p class="card-text ">A continuación, podrás navegar a través de la información más completa del torneo para
+      aquellos interesados en planear el futuro y estar preparados durante la cita mundialista del 2022.</p>
+  </div></div></div>
+
 </div>
 
       <style>
@@ -72,7 +77,6 @@ body {
 }
 .card {
   border: 3px solid white;
-  margin: 250px 0px 0px 20px;
 }
 
 </style>
