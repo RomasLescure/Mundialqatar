@@ -47,6 +47,9 @@
         <label for="fecha" style="margin-left: 20px">Buscar partidos por fecha:</label>
         <input type="date" id="fecha" name="Fecha" value="2022-11-29" min="2022-11-20" max="2022-12-18">
     </form>
+   <?php
+   $conn=mysqli_connect('localhost','root','','datos_mundial');
+   ?>
     <table class="table table-hover" style="position: absolute; top: 50%; margin: 0px 20px 0px 20px;">
         <thead>
             <tr>
@@ -54,24 +57,33 @@
             <th scope="col">Hora</th>
             <th scope="col">Fecha</th>
             <th scope="col">Equipo 1</th>
+            <th scope="col">Goles Equipo 1</th>
+            <th scope="col"></th>
+            <th scope="col">Goles Equipo 2</th>
             <th scope="col">Equipo 2</th>
+        
             </tr>
         </thead>
+        <?php
+        $sql="SELECT * FROM partidos";
+        $result=mysqli_query($conn,$sql);
+
+        while($mostra=mysqli_fetch_array($result)){
+        ?>
         <tbody>
             <tr class="table-danger">
-            <th scope="row">Danger</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            </tr>
-            <tr class="table-warning">
-            <th scope="row">Warning</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            </tr>
+            <th scope="row"><?php echo $mostra['estadio'] ?></th>
+            <td><?php echo $mostra['hora'] ?></td>
+            <td><?php echo $mostra['fecha'] ?></td>
+            <td><?php echo $mostra['id_equipo1'] ?></td>
+            <td><?php echo $mostra['gol_equipo1'] ?></td>
+            <td>-</td>
+            <td><?php echo $mostra['gol_equipo2'] ?></td>
+            <td><?php echo $mostra['id_equipo2'] ?></td>
+            </tr> 
+            <?php
+        }
+            ?>
         </tbody>
     </table>
 </body>
