@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
@@ -64,6 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
         </div>
     </nav>
+    <div class="animate__animated animate__fadeInUp">
     <div class="card text-white bg-primary mx-auto" style="max-width: 40em; margin-top:100px;">
         <div class="card-header">Inicio de sesión</div>
         <div class="card-body">
@@ -82,6 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="registrar.php"><button style="margin-top:10px;">registrarse</button></a>
         </div>
     </div>
+</div>
 </body>
 <style>
 body { 
