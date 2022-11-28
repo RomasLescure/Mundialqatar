@@ -40,6 +40,276 @@
             <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
           </div>
         </div>
+        
     </nav>
+    <br>
+  <h1 style="margin-left: 20px">Tabla de Posiciones</h1>
+  
+
+  <?php
+
+  $conn = mysqli_connect('localhost', 'root', '', 'datos_mundial');
+  ?>
+  <table class="table table-hover" style="position: absolute; top: 50%; margin: 0px 20px 0px 20px;">
+    <thead>
+      <tr> GRUPO A
+        <th scope="col">Pais</th>
+        <th scope="col">Puntos</th>
+        <th scope="col">Juegos Jugados </th>
+        <th scope="col">Juegos Ganados</th>
+        <th scope="col">Juegos Empatados</th>
+        <th scope="col">Juegos Perdidos</th>
+        <th scope="col">Goles a Favor</th>
+        <th scope="col">Goles en Contra</th>
+        <th scope="col">Diferencia de Goles</th>
+
+      </tr>
+    </thead>
+    <?php
+
+    $sql = "SELECT * FROM equipos WHERE grupo = 'A'";
+    $result = mysqli_query($conn, $sql);
+
+    while ($mostra = mysqli_fetch_array($result)) {
+    ?>
+      <tbody>
+        <tr class="table-warning">
+          <th scope="row"><?php echo $mostra['pais'] ?></th>
+          <td><?php echo $mostra['puntos'] ?></td>
+          <td><?php echo $mostra['jj'] ?></td>
+          <td><?php echo $mostra['jg'] ?></td>
+          <td><?php echo $mostra['je'] ?></td>
+          <td><?php echo $mostra['jp'] ?></td>
+          <td><?php echo $mostra['ga'] ?></td>
+          <td><?php echo $mostra['gc'] ?></td>
+          <td><?php echo $mostra['dif'] ?></td>
+        </tr>
+      <?php
+    }
+      ?>
+      <table class="table table-hover" style="position: absolute; top: 50%; margin: 0px 20px 0px 20px;">
+    <thead>
+      <tr> GRUPO B
+        <th scope="col">Pais</th>
+        <th scope="col">Puntos</th>
+        <th scope="col">Juegos Jugados </th>
+        <th scope="col">Juegos Ganados</th>
+        <th scope="col">Juegos Empatados</th>
+        <th scope="col">Juegos Perdidos</th>
+        <th scope="col">Goles a Favor</th>
+        <th scope="col">Goles en Contra</th>
+        <th scope="col">Diferencia de Goles</th>
+
+      </tr>
+    </thead>
+    <?php
+
+    $sql = "SELECT * FROM equipos WHERE grupo = 'B'";
+    $result = mysqli_query($conn, $sql);
+
+    while ($mostra = mysqli_fetch_array($result)) {
+    ?>
+      <tbody>
+        <tr class="table-warning">
+          <th scope="row"><?php echo $mostra['pais'] ?></th>
+          <td><?php echo $mostra['puntos'] ?></td>
+          <td><?php echo $mostra['jj'] ?></td>
+          <td><?php echo $mostra['jg'] ?></td>
+          <td><?php echo $mostra['je'] ?></td>
+          <td><?php echo $mostra['jp'] ?></td>
+          <td><?php echo $mostra['ga'] ?></td>
+          <td><?php echo $mostra['gc'] ?></td>
+          <td><?php echo $mostra['dif'] ?></td>
+        </tr>
+      <?php
+    }
+      ?>
+      <table class="table table-hover" style="position: absolute; top: 50%; margin: 0px 20px 0px 20px;">
+    <thead>
+      <tr> GRUPO C
+        <th scope="col">Pais</th>
+        <th scope="col">Puntos</th>
+        <th scope="col">Juegos Jugados </th>
+        <th scope="col">Juegos Ganados</th>
+        <th scope="col">Juegos Empatados</th>
+        <th scope="col">Juegos Perdidos</th>
+        <th scope="col">Goles a Favor</th>
+        <th scope="col">Goles en Contra</th>
+        <th scope="col">Diferencia de Goles</th>
+
+      </tr>
+    </thead>
+    <?php
+
+    $sql = "SELECT * FROM equipos WHERE grupo = 'C'";
+    $result = mysqli_query($conn, $sql);
+
+    while ($mostra = mysqli_fetch_array($result)) {
+    ?>
+      <tbody>
+        <tr class="table-warning">
+          <th scope="row"><?php echo $mostra['pais'] ?></th>
+          <td><?php echo $mostra['puntos'] ?></td>
+          <td><?php echo $mostra['jj'] ?></td>
+          <td><?php echo $mostra['jg'] ?></td>
+          <td><?php echo $mostra['je'] ?></td>
+          <td><?php echo $mostra['jp'] ?></td>
+          <td><?php echo $mostra['ga'] ?></td>
+          <td><?php echo $mostra['gc'] ?></td>
+          <td><?php echo $mostra['dif'] ?></td>
+        </tr>
+      <?php
+    }
+      ?>
+      <table class="table table-hover" style="position: absolute; top: 50%; margin: 0px 20px 0px 20px;">
+    <thead>
+      <tr> GRUPO D
+        <th scope="col">Pais</th>
+        <th scope="col">Puntos</th>
+        <th scope="col">Juegos Jugados </th>
+        <th scope="col">Juegos Ganados</th>
+        <th scope="col">Juegos Empatados</th>
+        <th scope="col">Juegos Perdidos</th>
+        <th scope="col">Goles a Favor</th>
+        <th scope="col">Goles en Contra</th>
+        <th scope="col">Diferencia de Goles</th>
+
+      </tr>
+    </thead>
+    <?php
+
+    $sql = "SELECT * FROM equipos WHERE grupo = 'D'";
+    $result = mysqli_query($conn, $sql);
+
+    while ($mostra = mysqli_fetch_array($result)) {
+    ?>
+      <tbody>
+        <tr class="table-warning">
+          <th scope="row"><?php echo $mostra['pais'] ?></th>
+          <td><?php echo $mostra['puntos'] ?></td>
+          <td><?php echo $mostra['jj'] ?></td>
+          <td><?php echo $mostra['jg'] ?></td>
+          <td><?php echo $mostra['je'] ?></td>
+          <td><?php echo $mostra['jp'] ?></td>
+          <td><?php echo $mostra['ga'] ?></td>
+          <td><?php echo $mostra['gc'] ?></td>
+          <td><?php echo $mostra['dif'] ?></td>
+        </tr>
+      <?php
+    }
+      ?>
+      <table class="table table-hover" style="position: absolute; top: 50%; margin: 0px 20px 0px 20px;">
+    <thead>
+      <tr> GRUPO E
+        <th scope="col">Pais</th>
+        <th scope="col">Puntos</th>
+        <th scope="col">Juegos Jugados </th>
+        <th scope="col">Juegos Ganados</th>
+        <th scope="col">Juegos Empatados</th>
+        <th scope="col">Juegos Perdidos</th>
+        <th scope="col">Goles a Favor</th>
+        <th scope="col">Goles en Contra</th>
+        <th scope="col">Diferencia de Goles</th>
+
+      </tr>
+    </thead>
+    <?php
+
+    $sql = "SELECT * FROM equipos WHERE grupo = 'E'";
+    $result = mysqli_query($conn, $sql);
+
+    while ($mostra = mysqli_fetch_array($result)) {
+    ?>
+      <tbody>
+        <tr class="table-warning">
+          <th scope="row"><?php echo $mostra['pais'] ?></th>
+          <td><?php echo $mostra['puntos'] ?></td>
+          <td><?php echo $mostra['jj'] ?></td>
+          <td><?php echo $mostra['jg'] ?></td>
+          <td><?php echo $mostra['je'] ?></td>
+          <td><?php echo $mostra['jp'] ?></td>
+          <td><?php echo $mostra['ga'] ?></td>
+          <td><?php echo $mostra['gc'] ?></td>
+          <td><?php echo $mostra['dif'] ?></td>
+        </tr>
+      <?php
+    }
+      ?>
+      <table class="table table-hover" style="position: absolute; top: 50%; margin: 0px 20px 0px 20px;">
+    <thead>
+      <tr> GRUPO F
+        <th scope="col">Pais</th>
+        <th scope="col">Puntos</th>
+        <th scope="col">Juegos Jugados </th>
+        <th scope="col">Juegos Ganados</th>
+        <th scope="col">Juegos Empatados</th>
+        <th scope="col">Juegos Perdidos</th>
+        <th scope="col">Goles a Favor</th>
+        <th scope="col">Goles en Contra</th>
+        <th scope="col">Diferencia de Goles</th>
+
+      </tr>
+    </thead>
+    <?php
+
+    $sql = "SELECT * FROM equipos WHERE grupo = 'F'";
+    $result = mysqli_query($conn, $sql);
+
+    while ($mostra = mysqli_fetch_array($result)) {
+    ?>
+      <tbody>
+        <tr class="table-warning">
+          <th scope="row"><?php echo $mostra['pais'] ?></th>
+          <td><?php echo $mostra['puntos'] ?></td>
+          <td><?php echo $mostra['jj'] ?></td>
+          <td><?php echo $mostra['jg'] ?></td>
+          <td><?php echo $mostra['je'] ?></td>
+          <td><?php echo $mostra['jp'] ?></td>
+          <td><?php echo $mostra['ga'] ?></td>
+          <td><?php echo $mostra['gc'] ?></td>
+          <td><?php echo $mostra['dif'] ?></td>
+        </tr>
+      <?php
+    }
+      ?>
+      <table class="table table-hover" style="position: absolute; top: 50%; margin: 0px 20px 0px 20px;">
+    <thead>
+      <tr> GRUPO G
+        <th scope="col">Pais</th>
+        <th scope="col">Puntos</th>
+        <th scope="col">Juegos Jugados </th>
+        <th scope="col">Juegos Ganados</th>
+        <th scope="col">Juegos Empatados</th>
+        <th scope="col">Juegos Perdidos</th>
+        <th scope="col">Goles a Favor</th>
+        <th scope="col">Goles en Contra</th>
+        <th scope="col">Diferencia de Goles</th>
+
+      </tr>
+    </thead>
+    <?php
+
+    $sql = "SELECT * FROM equipos WHERE grupo = 'G'";
+    $result = mysqli_query($conn, $sql);
+
+    while ($mostra = mysqli_fetch_array($result)) {
+    ?>
+      <tbody>
+        <tr class="table-warning">
+          <th scope="row"><?php echo $mostra['pais'] ?></th>
+          <td><?php echo $mostra['puntos'] ?></td>
+          <td><?php echo $mostra['jj'] ?></td>
+          <td><?php echo $mostra['jg'] ?></td>
+          <td><?php echo $mostra['je'] ?></td>
+          <td><?php echo $mostra['jp'] ?></td>
+          <td><?php echo $mostra['ga'] ?></td>
+          <td><?php echo $mostra['gc'] ?></td>
+          <td><?php echo $mostra['dif'] ?></td>
+        </tr>
+      <?php
+    }
+      ?>
+      </tbody>
+  </table>
 </body>
 </html>
