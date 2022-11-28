@@ -34,6 +34,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Qatar 2022</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="equipos.php">Equipos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Resultados.php">Resultados</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Posiciones.php">Tabla de posiciones por grupo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Favoritos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Clasificaciones</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
     <div class="card text-white bg-primary mx-auto" style="max-width: 40em; margin-top:100px;">
         <div class="card-header">Inicio de sesión</div>
         <div class="card-body">
