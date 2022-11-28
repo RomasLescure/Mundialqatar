@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user"] = $user;
         header("location: inicio.php");
     } else {
-        echo "Usuario o contraseña invalidos JAJAJA";
+        echo "Usuario o contraseña invalidos";
     }
 }
 ?>
