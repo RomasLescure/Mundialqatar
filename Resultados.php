@@ -32,7 +32,7 @@
             <a class="nav-link" href="Posiciones.php">Tabla de posiciones por grupo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Favoritos</a>
+            <a class="nav-link" href="favoritos.php">Favoritos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
@@ -43,6 +43,7 @@
       </div>
     </div>
   </nav>
+  
   <br>
   <h1 style="margin-left: 20px">Resultados de partidos</h1>
   <form action="Resultados.php" method="post">

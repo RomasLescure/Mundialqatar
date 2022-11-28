@@ -32,7 +32,7 @@
             <span class="visually-hidden">(current)</span>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Favoritos</a>
+            <a class="nav-link" href="favoritos.php">Favoritos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
