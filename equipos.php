@@ -75,17 +75,95 @@
         <th>
           <h4 class="card-title">Jugadores</h4>
           <ol class="list-group">
-            <li>Almoez Ali</li>
-            <li>Ró-Ró</li>
-            <li>Akram Afif</li>
-            <li>Hassan Al-Haidos</li>
-            <li>Abdelkarim Hassan</li>
-            <li>Mohammed Muntari</li>
-            <li>Bassam Al-Rawi</li>
-            <li>Abdulaziz Hatem</li>
-            <li>Boualem Khoukhi</li>
-            <li>Saad Al Sheeb</li>
-            <li>Karim Boudiaf</li>
+          <table>
+            <tr>
+              <th>
+                <li>Almoez Ali</li>
+                <li>Ró-Ró</li>
+                <li>Akram Afif</li>
+                <li>Hassan Al-Haidos</li>
+                <li>Abdelkarim Hassan</li>
+                <li>Mohammed Muntari</li>
+                <li>Bassam Al-Rawi</li>
+                <li>Abdulaziz Hatem</li>
+                <li>Boualem Khoukhi</li>
+              </th>
+              <th>
+                <li>Saad Al Sheeb</li>
+                <li>Karim Boudiaf</li>
+                <li>Meshaal Barsham</li>
+                <li>Ismaeel Mohammad</li>
+                <li>Tarek Salman</li>
+                <li>Yousef Hassan</li>
+                <li>Assim Madibo</li>
+                <li>Homan Ahmed</li>
+                <li>Ahmed Alaaeldin</li>
+              </th>
+            </tr>
+          </table>
+          </ol>
+        </th>
+        </tr>
+        </thead>
+      </table>
+      </div>
+      <div class="card text-white bg-success" style="margin: 0px 300px 20px 300px;">
+      <div class="card-header"><h2>Ecuador  <img src="https://i.pinimg.com/originals/ef/3c/16/ef3c16f2d4b8d856f49fafa7e7b947c1.png"></h2></div>
+      <table>
+        <thead>
+          <tr>
+            <th>
+        <div class="card-body">
+          <h4 class="card-title">Historial</h4>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Mundiales Ganados
+              <span class="badge bg-primary rounded-pill">14</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Goles en mundiales
+              <span class="badge bg-primary rounded-pill">2</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Partidos Ganados
+              <span class="badge bg-primary rounded-pill">1</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Mundiales Jugados
+              <span class="badge bg-primary rounded-pill">1</span>
+            </li>
+          </ul>
+        </div>
+        </th>
+        <th>
+          <h4 class="card-title">Jugadores</h4>
+          <ol class="list-group">
+          <table>
+            <tr>
+              <th>
+                <li>Almoez Ali</li>
+                <li>Ró-Ró</li>
+                <li>Akram Afif</li>
+                <li>Hassan Al-Haidos</li>
+                <li>Abdelkarim Hassan</li>
+                <li>Mohammed Muntari</li>
+                <li>Bassam Al-Rawi</li>
+                <li>Abdulaziz Hatem</li>
+                <li>Boualem Khoukhi</li>
+              </th>
+              <th>
+                <li>Saad Al Sheeb</li>
+                <li>Karim Boudiaf</li>
+                <li>Meshaal Barsham</li>
+                <li>Ismaeel Mohammad</li>
+                <li>Tarek Salman</li>
+                <li>Yousef Hassan</li>
+                <li>Assim Madibo</li>
+                <li>Homan Ahmed</li>
+                <li>Ahmed Alaaeldin</li>
+              </th>
+            </tr>
+          </table>
           </ol>
         </th>
         </tr>
