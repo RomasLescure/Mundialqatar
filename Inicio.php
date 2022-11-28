@@ -52,7 +52,7 @@
   </div>
 </div>
 </div>
-<div class="animate__animated animate__fadeInUp d-inline-flex mr-auto">
+<div class="animate__animated animate__fadeInUp d-inline-flex">
   <div class="card border-dark" style="max-width: 20rem;">
   <div class="card-header">CARD 2</div>
   <div class="card-body">

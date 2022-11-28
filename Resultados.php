@@ -9,7 +9,7 @@
   <title>Resultados</title>
 </head>
 
-<body>
+<body class="bg-light bg-gradient">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Qatar 2022</a>
@@ -94,5 +94,7 @@
       </tbody>
   </table>
 </body>
+<style>
+</style>
 
 </html>
