@@ -34,26 +34,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <div class="card text-white bg-primary mb-3" style="margin: 20px 20px 20px 20px">
+    <div class="card text-white bg-primary mx-auto" style="max-width: 40em; margin-top:100px;">
         <div class="card-header">Inicio de sesión</div>
         <div class="card-body">
-            <form action="login.php" method="post">
-                <fieldset>
-                    <div class="form-group">
-                        <label for="user" class="form-label mt-4">Usuario</label>
-                        <input type="text" class="form-control" name="user" placeholder="Insertar Usuario">
-                    </div>
-                    <div class="form-group">
-                        <label for="pass" class="form-label mt-4">Contraseña</label>
-                        <input type="password" class="form-control" name="pass" placeholder="Insertar Contraseña">
-                    </div>
-                    <br>
-                    <input type="submit" value="conectar">
-                    <a href="registrar.php"><button>registrarse</button></a>
-                </fieldset>
-            </form>
+        <form action="login.php" method="post">
+                <div class="form-group">
+                    <label for="usuario" class="form-label mt-4">Usuario</label>
+                    <input type="text" class="form-control" name="usuario" placeholder="Insertar usuario">
+                </div>
+                <div class="form-group">
+                    <label for="contraseña" class="form-label mt-4">Contraseña</label>
+                    <input type="password" class="form-control" name="contraseña" placeholder="Insertar Contraseña">
+                </div>
+                <br>
+                <input type="submit" value="conectar">
+        </form>
+        <a href="registrar.php"><button style="margin-top:10px;">registrarse</button></a>
         </div>
     </div>
 </body>
-
+<style>
+body { 
+    background: url(https://st1.uvnimg.com/17/f5/c192e2834569bfcd52b59207f543/c3b9ce8e97424f0ebb0a94b921a9dac1) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.card {
+  border: 3px solid white;
+}
+</style>
 </html>

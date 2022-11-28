@@ -25,10 +25,10 @@
                 <a class="nav-link" href="equipos.php">Equipos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Resultados</a>
+                <a class="nav-link" href="Resultados.php">Resultados</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Tabla de posiciones por grupo</a>
+                <a class="nav-link" href="Posiciones.php">Tabla de posiciones por grupo</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Favoritos</a>
