@@ -41,8 +41,22 @@
 
   <br>
   <h1 style="margin-right: 20px">¡APOYA A TU EQUIPO!</h1>
+  <table class="table table-hover d-inline-flex p-2"  style="position: absolute; top: 50%; margin: 0px 20px 0px 20px";>
+    <thead>
+      <tr>
+      <tr class="table-dark">
+      <th scope="col">ESTADIO</th>
+      <th scope="col">FECHA</th>
+      <th scope="col">HORA</th>
+      <th scope="row">EQUIPO FAVORITO</th>
+      <th scope="col">GOLES A FAVOR</th>
+      <th scope="col"></th>
+      <th scope="col">GOLES EN CONTRA</th>
+      <th scope="col">CONTRINCANTE</th>
 
-  
+      </tr>
+    </thead>
+</table> 
 
 </body>
 
