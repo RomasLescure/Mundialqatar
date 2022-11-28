@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.min.css">
     <title>Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -25,10 +26,10 @@
                 <a class="nav-link" href="equipos.php">Equipos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Resultados</a>
+                <a class="nav-link" href="Resultados.php">Resultados</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Tabla de posiciones por grupo</a>
+                <a class="nav-link" href="Posiciones.php">Tabla de posiciones por grupo</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Favoritos</a>
@@ -42,6 +43,38 @@
           </div>
         </div>
       </nav>
+  <div class="animate__animated animate__fadeInUp d-inline-flex">
+  <div class="card border-dark" style="max-width: 20rem;">
+  <div class="card-header">CARD  1</div>
+  <div class="card-body">
+    <h4 class="card-title">QATAR 2022</h4>
+    <p class="card-text">Hola feliz mundial</p>
+  </div>
+</div>
+</div>
+<div class="animate__animated animate__fadeInUp d-inline-flex mr-auto">
+  <div class="card border-dark" style="max-width: 20rem;">
+  <div class="card-header">CARD 2</div>
+  <div class="card-body">
+    <h4 class="card-title">QATAR 2022</h4>
+    <p class="card-text">Hola feliz mundial</p>
+  </div>
+</div>
+</div>
 
+      <style>
+body { 
+    background: url(https://images5.alphacoders.com/128/1288612.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.card {
+  border: 3px solid white;
+  margin: 250px 0px 0px 20px;
+}
+
+</style>
 </body>
 </html>
