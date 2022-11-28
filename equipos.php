@@ -25,7 +25,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Resultados</a>
+                <a class="nav-link" href="Resultados.php">Resultados</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Tabla de posiciones por grupo</a>
@@ -43,33 +43,62 @@
         </div>
       </nav>
       <br>
-      <h1 style="margin-left: 20px">Tabla de equipos</h1>
-      <table class="table table-hover" style="position: absolute; top: 50%; margin: 0px 20px 0px 20px;">
+      <h1 style="margin-left: 20px">Equipos</h1>
+      <div class="card text-white bg-success" style="margin: 0px 300px 20px 300px;">
+      <div class="card-header"><h2>Qatar  <img src="https://i.pinimg.com/originals/ef/3c/16/ef3c16f2d4b8d856f49fafa7e7b947c1.png"></h2></div>
+      <table>
         <thead>
-            <tr>
-            <th scope="col">País</th>
-            <th scope="col">Mundiales ganados</th>
-            <th scope="col">Goles Mundiales</th>
-            <th scope="col">Partidos Ganados</th>
-            <th scope="col">Mundiales Jugados</th>
-            </tr>
+          <tr>
+            <th>
+        <div class="card-body">
+          <h4 class="card-title">Historial</h4>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Mundiales Ganados
+              <span class="badge bg-primary rounded-pill">14</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Goles en mundiales
+              <span class="badge bg-primary rounded-pill">2</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Partidos Ganados
+              <span class="badge bg-primary rounded-pill">1</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Mundiales Jugados
+              <span class="badge bg-primary rounded-pill">1</span>
+            </li>
+          </ul>
+        </div>
+        </th>
+        <th>
+          <h4 class="card-title">Jugadores</h4>
+          <ol class="list-group">
+            <li>Almoez Ali</li>
+            <li>Ró-Ró</li>
+            <li>Akram Afif</li>
+            <li>Hassan Al-Haidos</li>
+            <li>Abdelkarim Hassan</li>
+            <li>Mohammed Muntari</li>
+            <li>Bassam Al-Rawi</li>
+            <li>Abdulaziz Hatem</li>
+            <li>Boualem Khoukhi</li>
+            <li>Saad Al Sheeb</li>
+            <li>Karim Boudiaf</li>
+          </ol>
+        </th>
+        </tr>
         </thead>
-        <tbody>
-            <tr class="table-danger">
-            <th scope="row">Danger</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            </tr>
-            <tr class="table-warning">
-            <th scope="row">Warning</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            </tr>
-        </tbody>
-    </table>
+      </table>
+      </div>
 </body>
+<style>
+  img{
+    max-width: 50px; 
+    max-height: 50px;
+  }
+  ul{
+    max-width: 400px;
+  }
 </html>
