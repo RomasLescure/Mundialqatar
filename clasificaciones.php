@@ -42,12 +42,12 @@
         </div>
     </nav>
   <br>
-  <h1>Tabla de clasificacion de octavos</h1>
+  <h1>Tabla de clasificación de octavos</h1>
   <div>
     <table class="table mx-auto">
         <tr>
             <th>
-                <div class="card border-secondary mb-3" style="max-width: 45rem;">
+                <div class="card border-secondary mb-3" style="max-width: 45rem; margin: 0px 0px 0px 20px">
                     <div class="card-header">Grupo A</div>
                     <div class="card-body">
                     <table class="table table-hover">
@@ -111,7 +111,7 @@
         </tr>
         <tr>
             <th>
-                <div class="card border-secondary mb-3" style="max-width: 45rem;">
+                <div class="card border-secondary mb-3" style="max-width: 45rem; margin: 0px 0px 0px 20px">
                     <div class="card-header">Grupo C</div>
                     <div class="card-body">
                     <table class="table table-hover">
@@ -175,7 +175,7 @@
         </tr>
         <tr>
             <th>
-                <div class="card border-secondary mb-3" style="max-width: 45rem;">
+                <div class="card border-secondary mb-3" style="max-width: 45rem; margin: 0px 0px 0px 20px">
                     <div class="card-header">Grupo E</div>
                     <div class="card-body">
                     <table class="table table-hover">
@@ -239,7 +239,7 @@
         </tr>
         <tr>
             <th>
-                <div class="card border-secondary mb-3" style="max-width: 45rem;">
+                <div class="card border-secondary mb-3" style="max-width: 45rem; margin: 0px 0px 0px 20px">
                     <div class="card-header">Grupo G</div>
                     <div class="card-body">
                         <table class="table table-hover">
@@ -270,7 +270,7 @@
                 </div>
             </th>
             <th>
-                <div class="card border-secondary mb-3" style="max-width: 45rem;">
+                <div class="card border-secondary mb-3" style="max-width: 45rem; ">
                     <div class="card-header">Grupo H</div>
                     <div class="card-body">
                         <table class="table table-hover">

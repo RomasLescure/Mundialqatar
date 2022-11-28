@@ -28,13 +28,13 @@
                 <a class="nav-link" href="Resultados.php">Resultados</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Tabla de posiciones</a>
+                <a class="nav-link" href="Posiciones.php">Tabla de posiciones</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Favoritos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Clasificaciones</a>
+                <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
               </li>
             </ul>
             <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
