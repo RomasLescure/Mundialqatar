@@ -8,8 +8,38 @@
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
-<div class="card text-white bg-dark mb-3" style="margin: 20px 20px 20px 20px;">
-        <div class="card-header">Inicio de sesión</div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Qatar 2022</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="equipos.php">Equipos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Resultados.php">Resultados</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Posiciones.php">Tabla de posiciones por grupo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Favoritos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Clasificaciones</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+<div class="card text-white bg-dark mx-auto" style="max-width: 40em; margin-top:100px;">
+        <div class="card-header">Registrar usuario</div>
         <div class="card-body">
         <form action="login.php" method="post">
             <fieldset>
@@ -40,5 +70,17 @@
         </div>
     </div>
 </body>
+<style>
+body { 
+    background: url(https://st1.uvnimg.com/17/f5/c192e2834569bfcd52b59207f543/c3b9ce8e97424f0ebb0a94b921a9dac1) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.card {
+  border: 3px solid white;
+}
+</style>
 
 </html>
