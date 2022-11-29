@@ -59,7 +59,7 @@
         <th scope="col">GOLES A FAVOR</th>
         <th scope="col"></th>
         <th scope="col">GOLES EN CONTRA</th>
-        <th scope="col">CONTRINCANTE</th>
+        <!-- <th scope="col">CONTRINCANTE</th> -->
       </tr>
     </thead>
     <?php
@@ -88,7 +88,7 @@ WHERE user = $user*/
         <td><?php echo $mostra[0]["gol_equipo"]  ?></td>
         <td>-</td>
         <td><?php echo $mostra[1]["gol_equipo"] ?></td>
-        <td><?php echo $mostra[1]["pais"] ?></td>
+        <!-- <td><?php echo $mostra[1]["pais"] ?></td> -->
       </tr>
   </table>
 

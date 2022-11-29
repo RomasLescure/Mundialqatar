@@ -83,20 +83,20 @@
                             </tr>
                         </thead>
                             <tr class="table-success">
-                                <th scope="row"> <?php echo $pais1 ?> </th>
-                                <td> <?php echo $punto1 ?>  </th>
+                                <th scope="row">  </th>
+                                <td>  </th>
                             </tr>
                             <tr class="table-success">
-                            <th scope="row"> <?php echo $pais2 ?> </th>
-                                <td> <?php echo $punto2 ?>  </th>
+                                <th scope="row">  </th>
+                                <td>  </th>
                             </tr>
                             <tr class="table-danger">
-                            <th scope="row"> <?php echo $pais3 ?> </th>
-                                <td> <?php echo $punto3 ?>  </th>
+                                <th scope="row">  </th>
+                                <td>  </th>
                             </tr>
                             <tr class="table-danger">
-                            <th scope="row"> <?php echo $pais4 ?> </th>
-                                <td> <?php echo $punto4 ?>  </th>
+                                <th scope="row">  </th>
+                                <td>  </th>
                             </tr>
                         </table>
                     </div>
@@ -137,21 +137,21 @@
                             <th scope="col">puntos</th>
                             </tr>
                         </thead>
-                        <tr class="table-success">
-                                <th scope="row"> <?php echo $pais1 ?> </th>
-                                <td> <?php echo $punto1 ?>  </th>
+                            <tr class="table-success">
+                                <th scope="row">  </th>
+                                <td>   </th>
                             </tr>
                             <tr class="table-success">
-                            <th scope="row"> <?php echo $pais2 ?> </th>
-                                <td> <?php echo $punto2 ?>  </th>
+                                <th scope="row">  </th>
+                                <td>  </th>
                             </tr>
                             <tr class="table-danger">
-                            <th scope="row"> <?php echo $pais3 ?> </th>
-                                <td> <?php echo $punto3 ?>  </th>
+                                <th scope="row">  </th>
+                                <td>  </th>
                             </tr>
                             <tr class="table-danger">
-                            <th scope="row"> <?php echo $pais4 ?> </th>
-                                <td> <?php echo $punto4 ?>  </th>
+                                <th scope="row">  </th>
+                                <td>  </th>
                             </tr>
                         </table>
                     </div>
