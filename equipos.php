@@ -78,6 +78,8 @@ if (!empty($_SESSION['user'])) {
     
       <div class="card text-white bg-success grupos" >
       <div class="card-header"><h2>Qatar  <img src="https://i.pinimg.com/originals/ef/3c/16/ef3c16f2d4b8d856f49fafa7e7b947c1.png"></h2></div>
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
 <?php
 $id_equipo = 0;
 ?>
@@ -2685,7 +2687,7 @@ h1{
     transition: opacity 0.2s ease-in-out;
   }
   .custom-checkbox:hover .glyphicon-star{
-    opacity: 1;
+    opacity: 0.5;
   }
   .custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
     opacity: 1;
