@@ -56,7 +56,8 @@
                     <div class="card-body">
                     <?php
                     $conn = mysqli_connect('localhost', 'root', '', 'datos_mundial');
-
+                    ini_set('display_errors', 0);
+                    ini_set('display_startup_errors', 0);
                     $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
                     WHERE e.grupo = 'A' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
 
@@ -81,20 +82,20 @@
                             </tr>
                         </thead>
                             <tr class="table-success">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                            <th scope="row"> <?php echo $pais1 ?> </th>
+                                <td> <?php echo $punto1 ?>  </th>
                             </tr>
                             <tr class="table-success">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                            <th scope="row"> <?php echo $pais2 ?> </th>
+                                <td> <?php echo $punto2 ?>  </th>
                             </tr>
                             <tr class="table-danger">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                            <th scope="row"> <?php echo $pais3 ?> </th>
+                                <td> <?php echo $punto3 ?>  </th>
                             </tr>
                             <tr class="table-danger">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                            <th scope="row"> <?php echo $pais4 ?> </th>
+                                <td> <?php echo $punto4 ?>  </th>
                             </tr>
                         </table>
                     </div>
@@ -136,20 +137,20 @@
                             </tr>
                         </thead>
                             <tr class="table-success">
-                                <th scope="row">  </th>
-                                <td>   </th>
+                            <th scope="row"> <?php echo $pais1 ?> </th>
+                                <td> <?php echo $punto1 ?>  </th>
                             </tr>
                             <tr class="table-success">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                            <th scope="row"> <?php echo $pais2 ?> </th>
+                                <td> <?php echo $punto2 ?>  </th>
                             </tr>
                             <tr class="table-danger">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                            <th scope="row"> <?php echo $pais3 ?> </th>
+                                <td> <?php echo $punto3 ?>  </th>
                             </tr>
                             <tr class="table-danger">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                            <th scope="row"> <?php echo $pais4 ?> </th>
+                                <td> <?php echo $punto4 ?>  </th>
                             </tr>
                         </table>
                     </div>
