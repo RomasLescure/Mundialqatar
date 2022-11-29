@@ -61,8 +61,6 @@
                     WHERE e.grupo = 'A' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
 
                     $result = mysqli_query($conn, $sql);
-                    ini_set('display_errors', 0);
-                    ini_set('display_startup_errors', 0);
                     while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {
 
                     $pais1 = $mostra[0]["pais"];
@@ -172,10 +170,10 @@
                     $punto1 = NULL;
                     $pais2 = NULL;
                     $punto2 = NULL;
-                    $pais2 = NULL;
-                    $punto2 = NULL;
-                    $pais2 = NULL;
-                    $punto2 = NULL;
+                    $pais3 = NULL;
+                    $punto3 = NULL;
+                    $pais4 = NULL;
+                    $punto4 = NULL;
                     while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
                     $pais1 = $mostra[0]["pais"];
                     $punto1 = $mostra[0]["puntos"];
@@ -227,10 +225,10 @@
                     $punto1 = NULL;
                     $pais2 = NULL;
                     $punto2 = NULL;
-                    $pais2 = NULL;
-                    $punto2 = NULL;
-                    $pais2 = NULL;
-                    $punto2 = NULL;
+                    $pais3 = NULL;
+                    $punto3 = NULL;
+                    $pais4 = NULL;
+                    $punto4 = NULL;
                     while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
                     $pais1 = $mostra[0]["pais"];
                     $punto1 = $mostra[0]["puntos"];
@@ -284,10 +282,10 @@
                     $punto1 = NULL;
                     $pais2 = NULL;
                     $punto2 = NULL;
-                    $pais2 = NULL;
-                    $punto2 = NULL;
-                    $pais2 = NULL;
-                    $punto2 = NULL;
+                    $pais3 = NULL;
+                    $punto3 = NULL;
+                    $pais4 = NULL;
+                    $punto4 = NULL;
                     while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
                     $pais1 = $mostra[0]["pais"];
                     $punto1 = $mostra[0]["puntos"];
@@ -339,10 +337,10 @@
                     $punto1 = NULL;
                     $pais2 = NULL;
                     $punto2 = NULL;
-                    $pais2 = NULL;
-                    $punto2 = NULL;
-                    $pais2 = NULL;
-                    $punto2 = NULL;
+                    $pais3 = NULL;
+                    $punto3 = NULL;
+                    $pais4 = NULL;
+                    $punto4 = NULL;
                     while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
                     $pais1 = $mostra[0]["pais"];
                     $punto1 = $mostra[0]["puntos"];
@@ -396,10 +394,10 @@
                     $punto1 = NULL;
                     $pais2 = NULL;
                     $punto2 = NULL;
-                    $pais2 = NULL;
-                    $punto2 = NULL;
-                    $pais2 = NULL;
-                    $punto2 = NULL;
+                    $pais3 = NULL;
+                    $punto3 = NULL;
+                    $pais4 = NULL;
+                    $punto4 = NULL;
                     while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
                     $pais1 = $mostra[0]["pais"];
                     $punto1 = $mostra[0]["puntos"];
@@ -451,10 +449,10 @@
                     $punto1 = NULL;
                     $pais2 = NULL;
                     $punto2 = NULL;
-                    $pais2 = NULL;
-                    $punto2 = NULL;
-                    $pais2 = NULL;
-                    $punto2 = NULL;
+                    $pais3 = NULL;
+                    $punto3 = NULL;
+                    $pais4 = NULL;
+                    $punto4 = NULL;
                     while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
                     $pais1 = $mostra[0]["pais"];
                     $punto1 = $mostra[0]["puntos"];
