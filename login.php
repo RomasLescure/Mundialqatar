@@ -71,17 +71,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="card-body">
         <form action="login.php" method="post">
           <div class="form-group">
-            <label for="usuario" class="form-label mt-4">Usuario</label>
-            <input type="text" class="form-control" name="usuario" placeholder="Insertar usuario">
+            <label for="usesr" class="form-label mt-4">Usuario</label>
+            <input type="text" class="form-control" name="user" placeholder="Insertar usuario">
           </div>
           <div class="form-group">
-            <label for="contraseña" class="form-label mt-4">Contraseña</label>
-            <input type="password" class="form-control" name="contraseña" placeholder="Insertar Contraseña">
+            <label for="pass" class="form-label mt-4">Contraseña</label>
+            <input type="password" class="form-control" name="pass" placeholder="Insertar Contraseña">
           </div>
           <br>
           <input type="submit" value="Iniciar Sesión">
         </form>
-        <p>¿No tiene cuenta? <a href="registrar.php" style="color: purple";>Registrarse</a></p>
+        <p>¿No tiene cuenta? <a href="registrar.php" style="color: purple" ;>Registrarse</a></p>
       </div>
     </div>
   </div>
