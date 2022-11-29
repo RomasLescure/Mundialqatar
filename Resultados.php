@@ -57,6 +57,10 @@
 
   <?php
 
+  // $q = $con->query($sql3);
+  // if ($q->num_rows > 0) {
+  // }
+
   $fechaform = $_POST['fechaform'];
   echo $fechaform;
 
