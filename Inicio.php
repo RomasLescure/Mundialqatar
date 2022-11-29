@@ -18,7 +18,6 @@ if (!empty($_SESSION['user'])) {
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,8 +69,14 @@ if (!empty($_SESSION['user'])) {
 
           <?php endif;  ?>
         </ul>
-        <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
-        <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
+        <?php
+        if (empty($_SESSION['user'])):?>
+          <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
+          <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
+       <?php  endif;?>
+        
+      
+        
       </div>
     </div>
   </nav>
