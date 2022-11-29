@@ -57,7 +57,6 @@ if (
         }
 
         //Sumarle o restarle lo necesario u operaciones necesarias 
-        $puntos = 0;
         $jugado = $jugado + 1;
         if ($goles1 > $goles2) {
             $ganado = $ganado + 1;
@@ -66,7 +65,7 @@ if (
         } else {
             $empate = $empate + 1;
         }
-        $puntos = $puntos + ($ganado * 3 + $empate * 1 + $perdido * 0);
+        $puntos = $ganado * 3 + $empate * 1 + $perdido * 0;
         $afavor = $afavor + $goles1;
         $contra = $contra + $goles2;
         $diferencia = abs($afavor - $contra);
