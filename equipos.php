@@ -44,8 +44,68 @@
     </nav>
       <br>
       <h1 style="margin-left: 20px">Equipos</h1>
+    
       <div class="card text-white bg-success grupos" >
       <div class="card-header"><h2>Qatar  <img src="https://i.pinimg.com/originals/ef/3c/16/ef3c16f2d4b8d856f49fafa7e7b947c1.png"></h2></div>
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<?php
+session_start();
+$id_equipo = 0;
+?>
+<a href="favoritos.php?id_equipo=1">
+<label for="id-of-input" class="custom-checkbox">
+  <i class="glyphicon glyphicon-star-empty"></i>
+  <i class="glyphicon glyphicon-star"></i>
+  <span>Favorito</span>
+
+  </label>
+</a>
+
+
+<style> 
+    label {
+  /* Presentation */
+  font-size: 30px
+  }
+
+
+
+  label input[type="submit"] {
+    display: none;
+  }
+
+  .custom-checkbox {
+    margin-left: 2em;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .custom-checkbox .glyphicon {
+    color: gold;
+    position: absolute;
+    top: 0.4em;
+    left: -1.25em;
+    font-size: 0.75em;
+  }
+
+  .custom-checkbox .glyphicon-star-empty {
+    color: gray;
+  }
+
+  .custom-checkbox .glyphicon-star {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .custom-checkbox:hover .glyphicon-star{
+    opacity: 0.5;
+  }
+
+  .custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
+    opacity: 1;
+  }
+</style>
+
       <table>
         <thead>
           <tr>
@@ -109,6 +169,26 @@
       </div>
       <div class="card text-white bg-success grupos" >
       <div class="card-header"><h2>Ecuador  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAMAAABThUXgAAACSVBMVEX/3QDtHCQDTqJ4NWNtvkUeqNH///8Ada9FLCVVcXb82gDc3d7GkCQ+KCGUlplCKx+xur8TT4flHCW4KRjHvV/uzgA/KR7lzCDmxwDCQiYWUYQHTp46JR9CLB9ELCNIMh5QOB1LNB7u0RDngw6/slCvt7PCu2+9uXrMvkyxs5W8sl2usZ+Ik5FTU06tPyXPewvbxjFbeFpJbGBewd4Ajkg5X2XkWhZzyeLmaROG0ObpmArfvAO2kQelp6LOrwIfWII0ir4YP4EPTo2iciQXVpuImqqiYgkyYpVwiJ64p2LNtS2wqZy9ubbIsTjLycesooe1p26tly2bk4txZF9gUU2Cd3C4rYpYSDpOPDSMgnGyoEh/dG94a1abjVjAq0C6oRyRhGCSh4RaRBqgjkV9Zw19KCLo6OdwWxyBcj+kiA5kJiOeNyerZkC/i1HNmV/LqYNgSRmMchFiQy2CahNzhUzBtSCopy6Vl4RGVFuFZTZvV0HUPiBTZVTCxhBRlCy5jTyjrhDIWhZhe1MzlTmkdkqmfD1tmx7nehCGoRrWwzuarDBbkog9k5oygzS0wxWIdUZPdyTssQYoZE1cljx6h24ldj+YmS+zeRB1rkRmom1No4xOfUWIt0diZSMCZ24Bf1RfnrICa2QyoEEua4FempQAg1OLQBwBd1t1kBqFtLWrz9lFRTTUlwdPaG2SKETKHCdvsmh3uVx+K044g4+NVEg8i4BNk2VaMmBPj6p6okZZhGO8Hi+DjDoRbpZkWnZqYTuPKS+BSxiYJ0Sw6jSFAAAK7klEQVR4nO2b/19S5x7ADyeXdBREG3D0AAcoaxo5ctEqhBI0LUsrzcWmQ7Gk7tpuGgx1SpSDUbnt3kV+uavmZtfuuplmXzdly/1l93keDii92t09v/Rwd573S+F4eOD14f36fJ5v50hRBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAuH/DfbDg5WH7HYnm3WWYRlM8eQu7MGmw03NBYgja84fAucOH25qOVp5RI0tuNziWMvxVrme1xna2k4cL2hf80p7gec9ueJkW6unqbnpIPu7nyAVmPePfyDXaTQKvUGv0+tPNh9efY09fNyg4DU6jcGgMbS2dnQewhdnLvChp9Wg0Oh04Ecn5w0avrX5Q4Zxer1O9ZGjh4+fNJmMGmBSo1CY9Hq+ret96fZh3qGTSASvAPC8gVdoitqamjwfdHe3njjuMSmAJ6PJKNcodHqFwafn9UOeHmnqUp8y8qYijc8IUkpu5PWwFuX606d13b3NBc1y3qgvMir0wKa+SM7rFUaDwcef9/nPeHEHjgMWzAxqnN4LZ/2832g0yo06BW/6y0fnPv74k0/+2tsKejJezvOKIr3GUKSX876i835fn7+PlXZHz1B2p993Sm7SGExtwBRw1dzbLYc5ZTToDIbzivP+Uxcu2GtYtbRFpVFTNWdNoNhOnuzvby3oLehtk8sVJo2uSGP0+7190uyo/gvsWT8qRV7R3d39gVwu1+v1PjlQhTuw3MTbx5t8YHiUK+QQjZE3+C/gDip30GbXl91+6iwYARUpWfwFn9eZ3d6sfY3B5RrmiivW7DOs3Qfmp5Airz1bJWPdXCHpzmvrti2BYNYZFkzZ5Qbg6+UC/DSwWfXm64ss91BrK0MDg1mnfDo4Xz/Vx9tfajs0ENqslfTug9Y6/Nle4dAMH51glagb8jFeYRBkMt3aptKAVcpdFmT4CzTTZEbC6E89cNX/udN5sVCQFNFq1VowD2PYS5exBYmX1Y56bhNY+FAjI6MRShthvDqdafDz6OBgNHox1YaJRczWYJBRU7urX/F2KcBsNgtHA19Q8Yg5HIszbDg+cl7jj0bdhYWF7ujFi6gSma/ikWDEHKGoXTbhLebN0pJFXSnfkuqABjZR4XBwNB6OB69+ZfadiRZe7Lw2Nnats7AwCpc5QQq8EolEKGp3SpZ2S/kVjIHjgNmm2kqB7DIP7KXio9ov45ORWOwrb6fq68QbAme6yvvUlDkyEov/LRanqC+gLDO1VbVNYolFUW9VlFdWgsQZ+vtIbFL9zXXQNVH2zvKMKsBYAtqKaMM3bsTiZmrvMJBbWVle8Rbu2F87Zuqo44pt3D5hHwlHzF9OfjnCqHvSrqb+MYaegS1KHfv2+xsg66j7hepx2xXHUcr8x5/+J+PNbRXtlu0HnDVsLBK8emP0Zh91TJVyNTYeDI4LtirOam/d/u7G6GiMstfYD2y3tFdsk948Xlu+lUlUvc3W2MORH+I3J2dKJrYBV9OJLmWPk2WdPcpE/fQbY6Get2fvfg9khSlnjfrtqgSztVyCU1OzlQlcYhmnNhz74eqNu2Ul5xwJYKqrS9lpR7J6+jyeRKJ8tvT2P3eOjo6CNTaYmAYYq/SqELHjEsWy8XB49Oq3M3SpI+HpUSrrp6fvwDK8Mz2dUHYe6w51bASyAGCNzVKXduCOGRvVuyjKHo6Fw7Fv6uhzDg8w9Q7kztTUHdRlTVuUHtWs6y6UpVWDpfWu6j/+1D8pNiCLisTCsZt3aZcnVA9FvftOFtOW0BCNZAXhNkRmFi89kCzq23/djNnoAVXiXcC99esL7mUJC4WKZ6CsW7CtlGXtRo+20XgZPef4cc8eoAoBfGWwqAbqgCsbKsDdkpXFgHUhoJq+DWSdCO25VwA89SJZ6wv2pPnRsZ3eufM2jWRtkqws9Xa071dN0/1ldChUAE0hV/Cx917aVugE/d2/6ZSsvdslty4UUNfch09AVulHxU0JC2BDgZBbqBZThDzcbKkg636NVDeW7TXoSheUJZt1dGxAWOCvyqFUblCWq1SWDXNzoa4qWVqWs+blrXmpwK6RVeoY3vBK5uY6Wj5bI0uytzukvvgaWY2v0uVp2ZiRReF1RWNkH4qgjKYfyDY6uqYSCYtgqzphuVadkRWalz2g6TLUeB/OeHNF1rwjkAdYuHNt6vr1vCxaPCVE1hpZi7KSpqPIzNT0VF7ey7JkssW0rDKc8WKVVbYqS+ZpT6lZeD42tfDw4cM1sjqILDr9/YuRrBMtUMz1qaeP9u/ff2dh1dWkYwjJKiayUrLWyWSPmyahmodPgav9z588nVpYWEDpFSh/LJOtI7Iysp7JwHC4nJf39FEyCVxNv4OMpdKrBQyGsmdE1lpZMg+qw4VH+fn7Z55PTyf3P3oKU2uyCXRZq7KKccaLVVZxejZQC3w8dvyUt/AkmQSyniefw+f8/JknUwEHqEJZbXroJLKQrPlQAgnKz08mkzNAVhIKS3rALAvJmpG4LBf6/mC5Qy+h1LLl5z+aevrzzz+PW63Bn5afAHHDjn7w0hKdXu64cMabA7KWaTR3kM2fgKnV8Ms+yNy+suIGUIeWDtC9w5kDvUxkAbQcqENYay+Uw/nZJBOeF+CFElCFnFbqspiMAJhasiFHtq1kBypClFgpsYwLZ7xYZdGZPRq6FlZbCbCVXHU1M+x4D7qaB4mV3qHBGi5eWam7uoPwEBViSb/FU51Oq+FQqL9EKEKaW9MUG3hlfUpl9l0afoFiZKdblYkzvw4Pn/k15Og4Dc+UPIMtU7MsahxruHhlBVIKPuXq6lUq5Txy83gI3lNaGO14jOzNI1ecoDWANVy8smaE7doddY0qVWPxi6qqqo0bq1aAq4mVUnBUtfG3WtQwfT/IDNZw8cqi0/+KUs3V13N0v3vFPbvidrsLJ8DD7MoB98oAapa+HQRvl4VbllCHlDmQbOS4QffgoNs9MbHihk9u8BjdDhq50q2oy3ijxSyrGE41mUOVjnaL0mKBggAT0WjULTBYbwltrRRcaV14o8Urq64+Aeel5ivtW0LKg++nZA1OrEBXgq83AcLtyUyivg5ruFhl1dU3ZArRuplST0wI6YQ6Lvg7UUitEqAb8NrCKQu6AgOdcI8oQ1n9QNCBA0ATkoWOzmT+edO8AzRuAMMAPjDKamhMpUlZIKhVa63LNg505axafai4dmmd6xY4GndxNGdbttrV2mCgOOtNWMAoq7Fh9ViorxkGbdk8W3pA21ZHv1QGCiQbX2eM2eCTxa0pKMFVagFoA7KWUruo5tQF6CxbHL5CxDx1SJHuty8LO8eLSyUcx65ZC2bZwkcuyMqMcSixWI7+bUnGpXZGGeHSV27YygFZq/MBIIsNLtP0EpRV7dUylDl9nTAnbGGXxa0Z3+r2ldHeyzQneyGrpWfsLtc+V6ZdXWMDzlkDArushvqsP7llTpBFX7Zlt8SfW7hlcQ3Z86YyF7yKiGTRL92LVYc9tXDLehmO42qhrGe1HMY5wu+Qa7IAtYtA1lIt7jBeQQ7KeiYrWZxHl79yDWpdzrH42+K6dQ8WcYfxCigZ4X+GyBIBkSUCIksERJYIiCwREFkiILJEQGSJgMgSAZElAiJLBESWCIgsERBZIiCyREBkiYDIEgGRJQIiSwRElgiILBEQWSIgskRAZImAyBIBkSUCIksERJYIiCwREFkiILJEQGSJgMgSAZElAiJLBESWCP4D++MgxYvRXpoAAAAASUVORK5CYII="></h2></div>
+      <?php
+$id_equipo = 0;
+?>
+<a href="favoritos.php?id_equipo=2">
+<label for="id-of-input" class="custom-checkbox">
+  <i class="glyphicon glyphicon-star-empty"></i>
+  <i class="glyphicon glyphicon-star"></i>
+<?php
+if($_SESSION['id_equipo'] = 2){
+}
+else{
+  
+}
+  ?>
+  <span>Favorito</span>
+  </label>
+</a>
+
+
+
       <table>
         <thead>
           <tr>

@@ -39,7 +39,17 @@
       </div>
     </div>
   </nav>
+<?php
+session_start();
+$id_equipo = 0;
 
+$id_equipo = $_GET['id_equipo'];
+$_SESSION['id_equipo'] = $id_equipo;
+echo $id_equipo;
+  
+
+?>
+<p><a href="equipos.php"></a>
   <br>
   <h4>¡APOYA A TU EQUIPO!</h4>
   <table class="table table-hover d-inline-flex justify-content-end p-2"  style="position: left";>
