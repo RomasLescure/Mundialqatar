@@ -42,21 +42,12 @@
       </div>
     </div>
   </nav>
-<?php
-session_start();
-$id_equipo = 0;
 
-$id_equipo = $_GET['id_equipo'];
-$_SESSION['id_equipo'] = $id_equipo;
-echo $id_equipo;
-  
-
-?>
 <p><a href="equipos.php"></a>
   <br>
   <h4>¡APOYA A TU EQUIPO!</h4>
-  <table class="table table-hover d-inline-flex justify-content-end p-2"  style="position: left";>
-    <thead>
+  <table class="table table-hover "  style="position: left";>
+  <thead>
       <tr>
       <tr class="table-dark">
       <th scope="col">ESTADIO</th>
@@ -69,6 +60,37 @@ echo $id_equipo;
       <th scope="col">CONTRINCANTE</th>
       </tr>
     </thead>
+    <?php
+session_start();
+$conn = mysqli_connect('localhost', 'root', '', 'datos_mundial');
+$id_equipo = 0;
+
+  $id_equipo = $_GET['id_equipo'];
+  $_SESSION['id_equipo'] = $id_equipo;
+
+$sql = "SELECT * FROM (partidos p, equipos e, partidos_juegos pj ) WHERE e.id_equipo = $id_equipo AND e.id_equipo = ej.id_equipos";
+/*UPDATE usuarios
+SET id_equipo
+WHERE user = $user*/
+$result = mysqli_query($conn, $sql);
+    while ($mostra = mysqli_fetch_array($result)) {
+     
+    ?>
+      <tbody>
+        <tr class="table-warning">
+          <th scope="row"><?php echo $mostra['pais'] ?></th>
+          <td><?php echo $mostra['puntos']  ?></td>
+          <td><?php echo $mostra['jj'] ?></td>
+          <td><?php echo $mostra['jg'] ?></td>
+          <td><?php echo $mostra['je'] ?></td>
+          <td><?php echo $mostra['jp'] ?></td>
+          <td><?php echo $mostra['ga'] ?></td>
+          <td><?php echo $mostra['gc'] ?></td>
+          <td><?php echo $mostra['dif'] ?></td>
+        </tr>
+      <?php
+    }
+?>
   </table> 
 
 </body>

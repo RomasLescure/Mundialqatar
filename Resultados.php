@@ -38,7 +38,7 @@
             <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
           </li>
           <li class="nav-item">
-                <a class="nav-link" href="DatosPartido.php">Datos</a>
+            <a class="nav-link" href="DatosPartido.php">Datos</a>
           </li>
         </ul>
         <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
@@ -46,7 +46,7 @@
       </div>
     </div>
   </nav>
-  
+
   <br>
   <h1 style="margin-left: 20px">Resultados de partidos</h1>
   <form action="Resultados.php" method="post">
@@ -76,38 +76,41 @@
     </thead>
     <?php
 
-    $sql = "SELECT * FROM partidos WHERE (fecha = '$fechaform')";
-
-    // $sql = "SELECT * 
-    // FROM (partidos p, equipos e) 
-    // WHERE (p.fecha = '$fechaform') 
-    //   AND (e.id_equipos = p.id_equipo1)
-    //   OR (e.id_equipos = p.id_equipo2) 
-    //   ";
-
-    // SELECT p.nombre, m.nombre_mov 
-    // FROM movimiento m, pokedex p, movimiento_poke mp
-    // WHERE (p.id_pokemon = mp.id_pokemon) AND (mp.id_mov = m.id_mov);
+    //$sql = "SELECT * FROM partidos WHERE (fecha = '$fechaform')";
+    $sql = "SELECT * FROM (partidos_juegos pj, partidos p, equipos e)
+    WHERE pj.id_partido = p.id_partido AND e.id_equipo = pj.id_equipo AND e.grupo = 'A'";
+    //and p.fecha = '$fechaform'
 
     $result = mysqli_query($conn, $sql);
 
-    while ($mostra = mysqli_fetch_array($result)) {
-    ?>
-      <tbody>
-        <tr class="table-danger">
-          <th scope="row"><?php echo $mostra['estadio'] ?></th>
-          <td><?php echo $mostra['hora'] ?></td>
-          <td><?php echo $mostra['fecha'] ?></td>
-          <td><?php echo $mostra['id_equipo1'] ?></td>
-          <td><?php echo $mostra['gol_equipo1'] ?></td>
-          <td>-</td>
-          <td><?php echo $mostra['gol_equipo2'] ?></td>
-          <td><?php echo $mostra['id_equipo2'] ?></td>
-        </tr>
-      <?php
+    while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {
+
+      $estadio = $mostra[0]["estadio"];
+      $hora = $mostra[0]["hora"];
+      $fecha = $mostra[0]["fecha"];
+      $id_equipo1 = $mostra[0]["pais"];
+      $gol_equipo1 = $mostra[0]["gol_equipo"];
+
+      $id_equipo2 = $mostra[1]["gol_equipo"];
+      $gol_equipo2 = $mostra[1]["pais"];
     }
+    ?>
+    <tbody>
+      <tr class="table-danger">
+        <th scope="row"><?php echo $estadio  ?></th>
+        <td><?php echo $hora ?></td>
+        <td><?php echo $fecha ?></td>
+        <td><?php echo $id_equipo1 ?></td>
+        <td><?php echo $gol_equipo1  ?></td>
+        <td>-</td>
+        <td><?php echo $id_equipo2 ?></td>
+        <td><?php echo $gol_equipo2 ?></td>
+      </tr>
+
+      <?php
+
       ?>
-      </tbody>
+    </tbody>
   </table>
 </body>
 <style>

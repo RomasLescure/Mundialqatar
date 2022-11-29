@@ -35,9 +35,14 @@
           <li class="nav-item">
             <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
           </li>
-          <li class="nav-item">
+          <?php if($_SESSION['TYPE'] == 'admin'): ?>
+
+            <li class="nav-item">
                 <a class="nav-link" href="DatosPartido.php">Datos</a>
           </li>
+
+          <?php endif;  ?>
+          
         </ul>
         <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
         <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>

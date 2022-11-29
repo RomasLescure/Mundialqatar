@@ -9,7 +9,7 @@ if (
     $type = $_POST['tipo'];
 
     $host = 'localhost';
-    $db = 'qatar_2022';
+    $db = 'datos_mundial';
     $pw = '';
     $userroot = 'root';
 
@@ -17,8 +17,8 @@ if (
     mysqli_select_db($con, $db) or die('no se puedo conectar a la BD');
 
     if ($type == "pred") {
-        $sql = "INSERT INTO usuarios(user, pass, tipo)
-        VALUES ('$user','$pass', '$type')";
+        $sql = "INSERT INTO usuarios(user, pass, tipo, id_equipo)
+        VALUES ('$user','$pass', '$type',NULL)";
 
         if ($con->query($sql) === TRUE) {
             echo 'Se ha registrado exitosamente<br><br>';
