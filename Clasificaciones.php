@@ -277,7 +277,6 @@
                     <?php
                     $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
                     WHERE e.grupo = 'E' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
-
                     $result = mysqli_query($conn, $sql);
                     $pais1 = NULL;
                     $punto1 = NULL;
@@ -498,21 +497,99 @@
       <div class='tournament' style="margin: 0px 60px 0px 60px">
         <ul class='round round-2'>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-left game-top'>1A</li>
+          <li class='game-left game-top'>
+          <!--1A-->
+          <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'A' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais1 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais1 = $mostra[0]["pais"];}
+            echo $pais1; ?> </li>
           <li class='game-left spacer'>&nbsp;</li>
-          <li class='game-left game-bottom'>2B</li>
+          <li class='game-left game-bottom'>
+          <!--2B-->
+          <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'B' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais2 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais2 = $mostra[1]["pais"];}
+            echo $pais2; ?> 
+          </li>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-left game-top'>1C</li>
+          <li class='game-left game-top'>
+        <!--1C-->
+          <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'C' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais1 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais1 = $mostra[0]["pais"];}
+            echo $pais1; ?> 
+          </li>
           <li class='game-left spacer'>&nbsp;</li>
-          <li class='game-left game-bottom'>2D</li>
+          <li class='game-left game-bottom'>
+          <!--2D-->
+          <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'D' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais2 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais2 = $mostra[1]["pais"];}
+            echo $pais2; ?></li>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-left game-top'>1E</li>
+          <li class='game-left game-top'>
+          <!--1E-->
+          <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'E' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais1 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais1 = $mostra[0]["pais"];}
+            echo $pais1; ?>
+          </li>
           <li class='game-left spacer'>&nbsp;</li>
-          <li class='game-left game-bottom'>2F</li>
+          <li class='game-left game-bottom'>
+          <!--2F-->
+          <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'F' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais2 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais2 = $mostra[1]["pais"];}
+            echo $pais2; ?> 
+          </li>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-left game-top'>1G</li>
+          <li class='game-left game-top'>
+            <!--1G-->
+          <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'G' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais1 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais1 = $mostra[0]["pais"];}
+            echo $pais1; ?> 
+          </li>
           <li class='game-left spacer'>&nbsp;</li>
-          <li class='game-left game-bottom'>2H</li>
+          <li class='game-left game-bottom'>
+             <!--2H-->
+          <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'H' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais2 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais2 = $mostra[1]["pais"];}
+            echo $pais2; ?> 
+          </li>
           <li class='spacer'>&nbsp;</li>
         </ul>
         <ul class='round round-3'>
@@ -568,21 +645,102 @@
         </ul>
         <ul class='round round-2'>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-right game-top'>1B</li>
+          <li class='game-right game-top'>
+        <!--1B-->
+          <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'B' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais1 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais1 = $mostra[0]["pais"];}
+            echo $pais1; ?>
+          </li>
           <li class='game-right spacer'>&nbsp;</li>
-          <li class='game-right game-bottom'>2A</li>
+          <li class='game-right game-bottom'>
+        <!--2A-->
+          <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'A' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais2 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais2 = $mostra[1]["pais"];}
+            echo $pais2; ?> 
+          </li>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-right game-top'>1D</li>
+          <li class='game-right game-top'>
+            <!--1D-->
+          <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'D' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais1 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais1 = $mostra[0]["pais"];}
+            echo $pais1; ?>
+          </li>
           <li class='game-right spacer'>&nbsp;</li>
-          <li class='game-right game-bottom'>2C</li>
+          <li class='game-right game-bottom'>
+            <!--2C-->
+            <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'C' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $pais2 = NULL;
+            $result = mysqli_query($conn, $sql);
+            $pais2 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais2 = $mostra[1]["pais"];}
+            echo $pais2; ?>          
+        </li>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-right game-top'>1F</li>
+          <li class='game-right game-top'>
+            <!--1F-->
+            <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'F' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais1 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais1 = $mostra[0]["pais"];}
+            echo $pais1; ?>       
+          </li>
           <li class='game-right spacer'>&nbsp;</li>
-          <li class='game-right game-bottom'>2E</li>
+          <li class='game-right game-bottom'>
+          <!--2E-->
+          <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'E' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais2 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais2 = $mostra[1]["pais"];}
+            echo $pais2; ?>             
+          </li>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-right game-top'>1H</li>
+          <li class='game-right game-top'>
+           <!--1H-->
+           <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'H' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais1 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais1 = $mostra[0]["pais"];}
+            echo $pais1; ?>           
+          </li>
           <li class='game-right spacer'>&nbsp;</li>
-          <li class='game-right game-bottom'>2G</li>
+          <li class='game-right game-bottom'>
+            <!--2G-->
+            <?php
+            $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+            WHERE e.grupo = 'G' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+            $result = mysqli_query($conn, $sql);
+            $pais2 = NULL;
+            while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                $pais2 = $mostra[1]["pais"];}
+            echo $pais2; ?>    
+        </li>
           <li class='spacer'>&nbsp;</li>
         </ul>
       </div>
