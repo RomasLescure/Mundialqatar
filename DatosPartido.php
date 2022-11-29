@@ -1,3 +1,23 @@
+<?php
+
+session_start();
+if (!empty($_SESSION['user'])) {
+
+  $user = $_SESSION['user'];
+
+  $con = mysqli_connect('localhost', 'root', '', 'datos_mundial');
+
+  $sql = "SELECT * FROM usuarios WHERE user = '$user'";
+
+  $result = mysqli_query($con, $sql);
+  $mostra = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+  $tipo = $mostra[0]["tipo"];
+
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,13 +58,29 @@
                         <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Datos</a>
+                        <a class="nav-link" href="DatosPartido.php">Datos</a>
                     </li>
-                </ul>
-                <?php
+                    <?php
+            
+          if (!empty($tipo)){
+          $_SESSION['type'] = $tipo;
+          }
+          if($_SESSION['type'] == 'admin'): ?>
+          
+            <li class="nav-item">
+                <a class="nav-link" href="DatosPartido.php">Datos</a>
+          </li>
+
+          <?php endif;  ?>
+        </ul>
+        <?php
         if (empty($_SESSION['user'])):?>
           <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
           <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
+       <?php  endif;?>
+       <?php
+        if (!empty($_SESSION['user'])):?>
+       <a href="logout.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Logout</button></a>
        <?php  endif;?>
             </div>
         </div>

@@ -53,21 +53,28 @@ if (!empty($_SESSION['user'])) {
                 <a class="nav-link active" href="#">Clasificaciones</a>
                 <span class="visually-hidden">(current)</span>
             </li>
-            <?php
-          $_SESSION['type'] = $tipo;
-          if($_SESSION['type'] == 'admin'): ?>
+            <<?php
+       
+       if (!empty($tipo)){
+       $_SESSION['type'] = $tipo;
+       }
+       if($_SESSION['type'] == 'admin'): ?>
+       
+         <li class="nav-item">
+             <a class="nav-link" href="DatosPartido.php">Datos</a>
+       </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="DatosPartido.php">Datos</a>
-          </li>
-
-          <?php endif;  ?>
-            </ul>
-            <?php
-        if (empty($_SESSION['user'])):?>
-          <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
-          <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
-       <?php  endif;?>
+       <?php endif;  ?>
+     </ul>
+     <?php
+     if (empty($_SESSION['user'])):?>
+       <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
+       <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
+    <?php  endif;?>
+    <?php
+     if (!empty($_SESSION['user'])):?>
+    <a href="logout.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Logout</button></a>
+    <?php  endif;?>
         </div>
         </div>
     </nav>
