@@ -54,6 +54,27 @@
                 <div class="card border-secondary mb-3" style="max-width: 45rem; margin: 0px 0px 0px 20px">
                     <div class="card-header">Grupo A</div>
                     <div class="card-body">
+                    <?php
+                    $conn = mysqli_connect('localhost', 'root', '', 'datos_mundial');
+
+                    $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+                    WHERE e.grupo = 'A' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+
+                    $result = mysqli_query($conn, $sql);
+                    ini_set('display_errors', 0);
+                    ini_set('display_startup_errors', 0);
+                    while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {
+
+                    $pais1 = $mostra[0]["pais"];
+                    $punto1 = $mostra[0]["punto"];
+                    $pais2 = $mostra[1]["pais"];
+                    $punto2 = $mostra[1]["punto"];
+                    $pais3 = $mostra[2]["pais"];
+                    $punto3 = $mostra[2]["punto"];
+                    $pais4 = $mostra[3]["pais"];
+                    $punto4 = $mostra[3]["punto"];
+                    }
+                    ?>
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -62,20 +83,20 @@
                             </tr>
                         </thead>
                             <tr class="table-success">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                                <th scope="row"> <?php echo $pais1 ?> </th>
+                                <td> <?php echo $punto1 ?>  </th>
                             </tr>
                             <tr class="table-success">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                            <th scope="row"> <?php echo $pais2 ?> </th>
+                                <td> <?php echo $punto2 ?>  </th>
                             </tr>
                             <tr class="table-danger">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                            <th scope="row"> <?php echo $pais3 ?> </th>
+                                <td> <?php echo $punto3 ?>  </th>
                             </tr>
                             <tr class="table-danger">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                            <th scope="row"> <?php echo $pais4 ?> </th>
+                                <td> <?php echo $punto4 ?>  </th>
                             </tr>
                         </table>
                     </div>
@@ -85,6 +106,25 @@
                 <div class="card border-secondary mb-3" style="max-width: 45rem;">
                     <div class="card-header">Grupo B</div>
                     <div class="card-body">
+                    <?php
+                    $sql = "SELECT ep.puntos, e.pais FROM (equipos_juegos ep, equipos e)
+                    WHERE e.grupo = 'B' AND ep.id_equipos = e.id_equipo ORDER BY ep.puntos DESC";
+
+                    $result = mysqli_query($conn, $sql);
+                    ini_set('display_errors', 0);
+                    ini_set('display_startup_errors', 0);
+                    $pais1 = NULL;
+                    while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {    
+                    $pais1 = $mostra[0]["pais"];
+                    $punto1 = $mostra[0]["puntos"];
+                    $pais2 = $mostra[1]["pais"];
+                    $punto2 = $mostra[1]["puntos"];
+                    $pais3 = $mostra[2]["pais"];
+                    $punto3 = $mostra[2]["puntos"];
+                    $pais4 = $mostra[3]["pais"];
+                    $punto4 = $mostra[3]["puntos"];
+                    }
+                    ?>
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -92,21 +132,21 @@
                             <th scope="col">puntos</th>
                             </tr>
                         </thead>
-                            <tr class="table-success">
-                                <th scope="row">  </th>
-                                <td>   </th>
+                        <tr class="table-success">
+                                <th scope="row"> <?php echo $pais1 ?> </th>
+                                <td> <?php echo $punto1 ?>  </th>
                             </tr>
                             <tr class="table-success">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                            <th scope="row"> <?php echo $pais2 ?> </th>
+                                <td> <?php echo $punto2 ?>  </th>
                             </tr>
                             <tr class="table-danger">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                            <th scope="row"> <?php echo $pais3 ?> </th>
+                                <td> <?php echo $punto3 ?>  </th>
                             </tr>
                             <tr class="table-danger">
-                                <th scope="row">  </th>
-                                <td>  </th>
+                            <th scope="row"> <?php echo $pais4 ?> </th>
+                                <td> <?php echo $punto4 ?>  </th>
                             </tr>
                         </table>
                     </div>
