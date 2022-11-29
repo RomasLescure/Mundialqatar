@@ -56,7 +56,9 @@
   </form>
 
   <?php
+
   $fechaform = $_POST['fechaform'];
+  echo $fechaform;
 
   $conn = mysqli_connect('localhost', 'root', '', 'datos_mundial');
   ?>
@@ -76,40 +78,24 @@
     </thead>
     <?php
 
-    //$sql = "SELECT * FROM partidos WHERE (fecha = '$fechaform')";
     $sql = "SELECT * FROM (partidos_juegos pj, partidos p, equipos e)
-    WHERE pj.id_partido = p.id_partido AND e.id_equipo = pj.id_equipo AND e.grupo = 'A'";
-    //and p.fecha = '$fechaform'
+    WHERE pj.id_partido = p.id_partido AND e.id_equipo = pj.id_equipo AND p.fecha = '$fechaform'";
 
     $result = mysqli_query($conn, $sql);
+    $mostra = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    while ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC)) {
-
-      $estadio = $mostra[0]["estadio"];
-      $hora = $mostra[0]["hora"];
-      $fecha = $mostra[0]["fecha"];
-      $id_equipo1 = $mostra[0]["pais"];
-      $gol_equipo1 = $mostra[0]["gol_equipo"];
-
-      $id_equipo2 = $mostra[1]["gol_equipo"];
-      $gol_equipo2 = $mostra[1]["pais"];
-    }
     ?>
     <tbody>
       <tr class="table-danger">
-        <th scope="row"><?php echo $estadio  ?></th>
-        <td><?php echo $hora ?></td>
-        <td><?php echo $fecha ?></td>
-        <td><?php echo $id_equipo1 ?></td>
-        <td><?php echo $gol_equipo1  ?></td>
+        <th scope="row"><?php echo $mostra[0]["estadio"] ?></th>
+        <td><?php echo $mostra[0]["hora"] ?></td>
+        <td><?php echo $mostra[0]["fecha"] ?></td>
+        <td><?php echo $mostra[0]["pais"] ?></td>
+        <td><?php echo $mostra[0]["gol_equipo"]  ?></td>
         <td>-</td>
-        <td><?php echo $id_equipo2 ?></td>
-        <td><?php echo $gol_equipo2 ?></td>
+        <td><?php echo $mostra[1]["gol_equipo"] ?></td>
+        <td><?php echo $mostra[1]["pais"] ?></td>
       </tr>
-
-      <?php
-
-      ?>
     </tbody>
   </table>
 </body>

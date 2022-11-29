@@ -35,7 +35,9 @@
           <li class="nav-item">
             <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
           </li>
-          <?php if($_SESSION['TYPE'] == 'admin'): ?>
+          <?php
+          session_start(); 
+          if($_SESSION['type'] == 'admin'): ?>
 
             <li class="nav-item">
                 <a class="nav-link" href="DatosPartido.php">Datos</a>
@@ -56,7 +58,6 @@
       <div class="card-header"><h2>Qatar  <img src="https://i.pinimg.com/originals/ef/3c/16/ef3c16f2d4b8d856f49fafa7e7b947c1.png"></h2></div>
       <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 <?php
-session_start();
 $id_equipo = 0;
 ?>
 <a href="favoritos.php?id_equipo=1">
