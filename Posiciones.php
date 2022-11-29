@@ -28,7 +28,7 @@
             <a class="nav-link" href="resultados.php">Resultados</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Tabla de posiciones por grupo</a>
+            <a class="nav-link" href="Posiciones.php">Tabla de posiciones por grupo</a>
             <span class="visually-hidden">(current)</span>
           </li>
           <li class="nav-item">
