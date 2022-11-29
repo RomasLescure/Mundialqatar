@@ -1,5 +1,80 @@
 INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
 VALUES (NULL, 'Al Bayt', '2022-11-20', '17:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Internacional Khalifa', '2022-11-21', '4:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Al Thumama', '2022-11-21', '7:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Ahmad bin Ali', '2022-11-21', '10:00');
 
 INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
-VALUES (NULL, 'Al Thumama', '2022-11-21', '17:00');
+VALUES (NULL, 'Lusail', '2022-11-22', '1:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Ciudad de la Educacion', '2022-11-22', '4:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, '974', '2022-11-22', '7:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Al Janoub', '2022-11-22', '10:00');
+
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Al Bayt', '2022-11-23', '1:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Internacional Khalifa', '2022-11-23', '4:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Al Thumama', '2022-11-23', '7:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Ahmad bin Ali', '2022-11-23', '10:00');
+
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Al Wakrah', '2022-11-24', '1:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Ciudad de la Educacion', '2022-11-24', '4:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, '974', '2022-11-24', '7:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Lusail', '2022-11-24', '10:00');
+
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Ahmad bin Ali', '2022-11-25', '1:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Al thumama', '2022-11-25', '4:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Internacional Khalifa', '2022-11-25', '7:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Al Bayt', '2022-11-25', '10:00');
+
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Al Janoub', '2022-11-26', '1:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Ciudad de la Educacion', '2022-11-26', '4:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, '974', '2022-11-26', '7:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Lusail', '2022-11-26', '10:00');
+
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Ahmad bin Ali', '2022-11-27', '1:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Al thumama', '2022-11-27', '4:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Internacional Khalifa', '2022-11-27', '7:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Al Bayt', '2022-11-27', '10:00');
+
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Al Wakrah', '2022-11-28', '1:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Ciudad de la Educacion', '2022-11-28', '4:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, '974', '2022-11-28', '7:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Lusail', '2022-11-28', '10:00');
+
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Ahmad bin Ali', '2022-11-29', '6:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Al thumama', '2022-11-29', '6:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Internacional Khalifa', '2022-11-29', '10:00');
+INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
+VALUES (NULL, 'Al Bayt', '2022-11-29', '10:00');

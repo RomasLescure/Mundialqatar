@@ -13,7 +13,6 @@ if (!empty($_SESSION['user'])) {
   $mostra = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
   $tipo = $mostra[0]["tipo"];
-
 }
 
 ?>
@@ -58,11 +57,11 @@ if (!empty($_SESSION['user'])) {
           </li>
           <?php
           $_SESSION['type'] = $tipo;
-          if($_SESSION['type'] == 'admin'): ?>
+          if ($_SESSION['type'] == 'admin') : ?>
 
             <li class="nav-item">
-                <a class="nav-link" href="DatosPartido.php">Datos</a>
-          </li>
+              <a class="nav-link" href="DatosPartido.php">Datos</a>
+            </li>
 
           <?php endif;  ?>
         </ul>
@@ -87,35 +86,50 @@ if (!empty($_SESSION['user'])) {
         <!-- <th scope="col">CONTRINCANTE</th> -->
       </tr>
     </thead>
-    <?php
- 
-    $conn = mysqli_connect('localhost', 'root', '', 'datos_mundial');
-    $id_equipo = 0;
 
-    $id_equipo = $_GET['id_equipo'];
-    $_SESSION['id_equipo'] = $id_equipo;
+    <?php
+    $conn = mysqli_connect('localhost', 'root', '', 'datos_mundial');
+
+
+
+    try {
+      $id_equipo = 0;
+      $id_equipo = $_GET['id_equipo'];
+      $_SESSION['id_equipo'] = $id_equipo;
+    } catch (Exception $e) {
+      echo 'Excepción capturada';
+    }
 
     $sql = "SELECT * FROM (partidos_juegos pj, partidos p, equipos e)
-WHERE pj.id_partido = p.id_partido AND e.id_equipo = pj.id_equipo AND e.id_equipo = '$id_equipo' ";
-    /*UPDATE usuarios
-SET id_equipo
-WHERE user = $user*/
-    $result = mysqli_query($conn, $sql);
-    $mostra = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    WHERE pj.id_partido = p.id_partido AND e.id_equipo = pj.id_equipo AND e.id_equipo = '$id_equipo'";
+    $q = $con->query($sql);
+
+    if ($q->num_rows > 0) {
+      $result = mysqli_query($conn, $sql);
+      $mostra = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
     ?>
-    <tbody>
-      <tr class="table-warning">
-        <th scope="row"><?php echo $mostra[0]["estadio"] ?></th>
-        <td><?php echo $mostra[0]["hora"] ?></td>
-        <td><?php echo $mostra[0]["fecha"] ?></td>
-        <td><?php echo $mostra[0]["pais"] ?></td>
-        <td><?php echo $mostra[0]["gol_equipo"]  ?></td>
-        <td>-</td>
-        <td><?php echo $mostra[1]["gol_equipo"] ?></td>
-        <!-- <td><?php echo $mostra[1]["pais"] ?></td> -->
-      </tr>
+      <tbody>
+        <tr class="table-warning">
+          <th scope="row"><?php echo $mostra[0]["estadio"] ?></th>
+          <td><?php echo $mostra[0]["hora"] ?></td>
+          <td><?php echo $mostra[0]["fecha"] ?></td>
+          <td><?php echo $mostra[0]["pais"] ?></td>
+          <td><?php echo $mostra[0]["gol_equipo"]  ?></td>
+          <td>-</td>
+          <td><?php echo $mostra[1]["gol_equipo"] ?></td>
+          <!-- <td><?php //echo $mostra[1]["pais"] 
+                    ?></td> -->
+        </tr>
   </table>
+<?php
+    } else {
+?>
+  <label for="usesr" class="form-label mt-4">No has seleccionado un favorito</label>
+<?php
+    }
+?>
+
 
 </body>
 
