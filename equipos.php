@@ -2061,18 +2061,31 @@
       </table>
       </div>
 </body>
+
 <style>
   img{
     max-width: 50px; 
     max-height: 50px;
   }
   ul{
-    max-width: 400px;
+    max-width: 700px;
+
   }
   .jugadores{
     margin: 0px 10px 10px 30px;
   }
   .grupos{
-    margin: 10px 350px 10px 350px
+    margin: 10px 350px 10px 350px;
+  }
+
+  li{
+    margin: 0px 25px 0px 0px;
+  }
+
+  h4{
+    margin: 10px 0px 0px 0px
+  }
+  span{
+    margin: 0 0 0 3
   }
 </html>

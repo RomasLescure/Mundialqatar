@@ -40,8 +40,8 @@
   </nav>
 
   <br>
-  <h1 style="margin-right: 20px">¡APOYA A TU EQUIPO!</h1>
-  <table class="table table-hover d-inline-flex p-2"  style="position: absolute; top: 50%; margin: 0px 20px 0px 20px";>
+  <h4>¡APOYA A TU EQUIPO!</h4>
+  <table class="table table-hover d-inline-flex justify-content-end p-2"  style="position: left";>
     <thead>
       <tr>
       <tr class="table-dark">
@@ -53,10 +53,9 @@
       <th scope="col"></th>
       <th scope="col">GOLES EN CONTRA</th>
       <th scope="col">CONTRINCANTE</th>
-
       </tr>
     </thead>
-</table> 
+  </table> 
 
 </body>
 
@@ -67,6 +66,16 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+h4 {
+  font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to right, #553c9a 10%, #ee4b2b);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: right;
+  margin: 0 30 0 0 
 }
 </style>
 </html>
