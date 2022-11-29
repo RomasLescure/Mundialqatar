@@ -71,20 +71,19 @@
       </tr>
     </thead>
     <?php
-
-    $sql = "SELECT * FROM equipos WHERE grupo = 'A'";
+  /*
+  Pais(equipos) /Puntos(equipos_juegos)  /Juegos /Jugados  /Juegos Ganados /Juegos Empatados 
+  /Juegos Perdidos /Goles a favor /Goles En contra / Diferencia de goles
+  */
+    $sql = "SELECT * FROM (equipos_juegos ej,equipos e) WHERE e.grupo = 'A'";
     $result = mysqli_query($conn, $sql);
     while ($mostra = mysqli_fetch_array($result)) {
-      $puntos = 0;
-      $ganados = $mostra['jg'];
-      $empatados = $mostra['je'];
-      $perdido = $mostra['jp'];
-      $puntos = $puntos + ($ganados * 3 + $empatados * 1 + $perdido * 0)
+     
     ?>
       <tbody>
         <tr class="table-warning">
           <th scope="row"><?php echo $mostra['pais'] ?></th>
-          <td><?php echo $puntos ?></td>
+          <td><?php echo $mostra['puntos'] ?></td>
           <td><?php echo $mostra['jj'] ?></td>
           <td><?php echo $mostra['jg'] ?></td>
           <td><?php echo $mostra['je'] ?></td>
@@ -115,19 +114,15 @@
     </thead>
     <?php
 
-    $sql = "SELECT * FROM equipos WHERE grupo = 'B'";
+    $sql = "SELECT * FROM (equipos_juegos ej,equipos e)  WHERE grupo = 'B'";
     $result = mysqli_query($conn, $sql);
     while ($mostra = mysqli_fetch_array($result)) {
-      $puntos = 0;
-      $ganados = $mostra['jg'];
-      $empatados = $mostra['je'];
-      $perdido = $mostra['jp'];
-      $puntos = $puntos + ($ganados * 3 + $empatados * 1 + $perdido * 0)
+     
     ?>
       <tbody>
         <tr class="table-warning">
           <th scope="row"><?php echo $mostra['pais'] ?></th>
-          <td><?php echo $puntos ?></td>
+          <td><?php echo $mostra['puntos']  ?></td>
           <td><?php echo $mostra['jj'] ?></td>
           <td><?php echo $mostra['jg'] ?></td>
           <td><?php echo $mostra['je'] ?></td>
@@ -158,19 +153,15 @@
     </thead>
     <?php
 
-    $sql = "SELECT * FROM equipos WHERE grupo = 'C'";
+    $sql = "SELECT * FROM (equipos_juegos ej,equipos e)  WHERE grupo = 'C'";
     $result = mysqli_query($conn, $sql);
     while ($mostra = mysqli_fetch_array($result)) {
-      $puntos = 0;
-      $ganados = $mostra['jg'];
-      $empatados = $mostra['je'];
-      $perdido = $mostra['jp'];
-      $puntos = $puntos + ($ganados * 3 + $empatados * 1 + $perdido * 0)
+     
     ?>
       <tbody>
         <tr class="table-warning">
           <th scope="row"><?php echo $mostra['pais'] ?></th>
-          <td><?php echo $puntos ?></td>
+          <td><?php echo $mostra['puntos']  ?></td>
           <td><?php echo $mostra['jj'] ?></td>
           <td><?php echo $mostra['jg'] ?></td>
           <td><?php echo $mostra['je'] ?></td>
@@ -201,20 +192,16 @@
     </thead>
     <?php
 
-    $sql = "SELECT * FROM equipos WHERE grupo = 'D'";
+    $sql = "SELECT * FROM (equipos_juegos ej,equipos e)  WHERE grupo = 'D'";
     $result = mysqli_query($conn, $sql);
 
     while ($mostra = mysqli_fetch_array($result)) {
-      $puntos = 0;
-      $ganados = $mostra['jg'];
-      $empatados = $mostra['je'];
-      $perdido = $mostra['jp'];
-      $puntos = $puntos + ($ganados * 3 + $empatados * 1 + $perdido * 0)
+     
     ?>
       <tbody>
         <tr class="table-warning">
           <th scope="row"><?php echo $mostra['pais'] ?></th>
-          <td><?php echo $puntos ?></td>
+          <td><?php echo $mostra['puntos']  ?></td>
           <td><?php echo $mostra['jj'] ?></td>
           <td><?php echo $mostra['jg'] ?></td>
           <td><?php echo $mostra['je'] ?></td>
@@ -245,19 +232,15 @@
     </thead>
     <?php
 
-    $sql = "SELECT * FROM equipos WHERE grupo = 'E'";
+    $sql = "SELECT * FROM (equipos_juegos ej,equipos e)  WHERE grupo = 'E'";
     $result = mysqli_query($conn, $sql);
     while ($mostra = mysqli_fetch_array($result)) {
-      $puntos = 0;
-      $ganados = $mostra['jg'];
-      $empatados = $mostra['je'];
-      $perdido = $mostra['jp'];
-      $puntos = $puntos + ($ganados * 3 + $empatados * 1 + $perdido * 0)
+     
     ?>
       <tbody>
         <tr class="table-warning">
           <th scope="row"><?php echo $mostra['pais'] ?></th>
-          <td><?php echo $puntos ?></td>
+          <td><?php echo $mostra['puntos']  ?></td>
           <td><?php echo $mostra['jj'] ?></td>
           <td><?php echo $mostra['jg'] ?></td>
           <td><?php echo $mostra['je'] ?></td>
@@ -288,20 +271,16 @@
     </thead>
     <?php
 
-    $sql = "SELECT * FROM equipos WHERE grupo = 'F'";
+    $sql = "SELECT * FROM (equipos_juegos ej,equipos e)  WHERE grupo = 'F'";
     $result = mysqli_query($conn, $sql);
 
     while ($mostra = mysqli_fetch_array($result)) {
-      $puntos = 0;
-      $ganados = $mostra['jg'];
-      $empatados = $mostra['je'];
-      $perdido = $mostra['jp'];
-      $puntos = $puntos + ($ganados * 3 + $empatados * 1 + $perdido * 0)
+     
     ?>
       <tbody>
         <tr class="table-warning">
           <th scope="row"><?php echo $mostra['pais'] ?></th>
-          <td><?php echo $puntos ?></td>
+          <td><?php echo $mostra['puntos']  ?></td>
           <td><?php echo $mostra['jj'] ?></td>
           <td><?php echo $mostra['jg'] ?></td>
           <td><?php echo $mostra['je'] ?></td>
@@ -332,19 +311,15 @@
     </thead>
     <?php
 
-    $sql = "SELECT * FROM equipos WHERE grupo = 'G'";
+    $sql = "SELECT * FROM (equipos_juegos ej,equipos e)  WHERE grupo = 'G'";
     $result = mysqli_query($conn, $sql);
     while ($mostra = mysqli_fetch_array($result)) {
-      $puntos = 0;
-      $ganados = $mostra['jg'];
-      $empatados = $mostra['je'];
-      $perdido = $mostra['jp'];
-      $puntos = $puntos + ($ganados * 3 + $empatados * 1 + $perdido * 0)
+     
     ?>
       <tbody>
         <tr class="table-warning">
           <th scope="row"><?php echo $mostra['pais'] ?></th>
-          <td><?php echo $puntos ?></td>
+          <td><?php echo $mostra['puntos']  ?></td>
           <td><?php echo $mostra['puntos'] ?></td>
           <td><?php echo $mostra['jj'] ?></td>
           <td><?php echo $mostra['jg'] ?></td>
@@ -377,19 +352,15 @@
     </thead>
     <?php
 
-    $sql = "SELECT * FROM equipos WHERE grupo = 'H'";
+    $sql = "SELECT * FROM (equipos_juegos ej,equipos e)  WHERE grupo = 'H'";
     $result = mysqli_query($conn, $sql);
     while ($mostra = mysqli_fetch_array($result)) {
-      $puntos = 0;
-      $ganados = $mostra['jg'];
-      $empatados = $mostra['je'];
-      $perdido = $mostra['jp'];
-      $puntos = $puntos + ($ganados * 3 + $empatados * 1 + $perdido * 0)
+     
     ?>
       <tbody>
         <tr class="table-warning">
           <th scope="row"><?php echo $mostra['pais'] ?></th>
-          <td><?php echo $puntos ?></td>
+          <td><?php echo $mostra['puntos']  ?></td>
           <td><?php echo $mostra['puntos'] ?></td>
           <td><?php echo $mostra['jj'] ?></td>
           <td><?php echo $mostra['jg'] ?></td>
