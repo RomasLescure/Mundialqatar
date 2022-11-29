@@ -45,6 +45,7 @@
         </div>
     </nav>
   <br>
+  
   <h1 style="text-align: center;">LLAVES Y CRUCES DE CLASIFICADOS</h1>
   <div>
     <table class="table mx-auto">
@@ -62,7 +63,7 @@
                         </thead>
                             <tr class="table-success">
                                 <th scope="row">  </th>
-                                <td>   </th>
+                                <td>  </th>
                             </tr>
                             <tr class="table-success">
                                 <th scope="row">  </th>
