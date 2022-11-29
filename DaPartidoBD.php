@@ -69,7 +69,7 @@ if (
         $puntos = $puntos + ($ganado * 3 + $empate * 1 + $perdido * 0);
         $afavor = $afavor + $goles1;
         $contra = $contra + $goles2;
-        $diferencia = abs($afavor - $contra);
+        $diferencia = $afavor - $contra;
 
         $sql4 = "UPDATE equipos_juegos SET puntos = $puntos, 
     jj = '$jugado',
@@ -111,7 +111,7 @@ if (
 
         $afavor = $afavor + $goles1;
         $contra = $contra + $goles2;
-        $diferencia = abs($afavor - $contra);
+        $diferencia = $afavor - $contra;
 
         $sql4 = "INSERT INTO equipos_juegos (id_equipos,puntos,jj,jg,je,jp,ga,gc,dif)
         VALUES ('$pais1','$puntos', '$jugado','$ganado','$empate','$perdido','$afavor','$contra', '$diferencia')";
@@ -151,21 +151,21 @@ if (
         //Sumarle o restarle lo necesario u operaciones necesarias 
         $puntos = 0;
         $jugado = $jugado + 1;
-        if ($goles1 > $goles2) {
+        if ($goles2 > $goles1) {
             $ganado = $ganado + 1;
-        } elseif ($goles1 < $goles2) {
+        } elseif ($goles2 < $goles1) {
             $perdido = $perdido + 1;
         } else {
             $empate = $empate + 1;
         }
         $puntos = $puntos + ($ganado * 3 + $empate * 1 + $perdido * 0);
-        $afavor = $afavor + $goles1;
-        $contra = $contra + $goles2;
-        $diferencia = abs($afavor - $contra);
+        $afavor = $afavor + $goles2;
+        $contra = $contra + $goles1;
+        $diferencia = $afavor - $contra;
 
         $sql6 = "UPDATE equipos_juegos SET puntos = $puntos, 
     jj = '$jugado',
-    jg='$ganado',
+    jg = '$ganado',
     je = '$empate',
     jp = '$perdido',
     ga = '$afavor',
@@ -191,19 +191,19 @@ if (
         $puntos = 0;
 
         //Sumarle o restarle lo necesario u operaciones necesarias 
+        $puntos = 0;
         $jugado = $jugado + 1;
-        if ($goles1 > $goles2) {
+        if ($goles2 > $goles1) {
             $ganado = $ganado + 1;
-        } elseif ($goles1 < $goles2) {
+        } elseif ($goles2 < $goles1) {
             $perdido = $perdido + 1;
         } else {
             $empate = $empate + 1;
         }
         $puntos = $puntos + ($ganado * 3 + $empate * 1 + $perdido * 0);
-
-        $afavor = $afavor + $goles1;
-        $contra = $contra + $goles2;
-        $diferencia = abs($afavor - $contra);
+        $afavor = $afavor + $goles2;
+        $contra = $contra + $goles1;
+        $diferencia = $afavor - $contra;
 
         $sql6 = "INSERT INTO equipos_juegos (id_equipos,puntos,jj,jg,je,jp,ga,gc,dif)
         VALUES ('$pais2','$puntos', '$jugado','$ganado','$empate','$perdido','$afavor','$contra', '$diferencia')";

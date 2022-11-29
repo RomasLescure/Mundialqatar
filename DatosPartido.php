@@ -37,29 +37,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Datos.php">Datos</a>
+                    </li>
 
-                    <?php
-
-                    if (!empty($tipo)) {
-                        $_SESSION['type'] = $tipo;
-                    }
-                    if (isset($_SESSION['type']) && $_SESSION['type'] == 'admin') : ?>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="DatosPartido.php">Datos</a>
-                        </li>
-
-                    <?php endif; ?>
-                </ul>
-                <?php
-                if (empty($_SESSION['user'])) : ?>
-                    <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
-                    <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
-                <?php endif; ?>
-                <?php
-                if (!empty($_SESSION['user'])) : ?>
-                    <a href="logout.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Logout</button></a>
-                <?php endif; ?>
             </div>
         </div>
     </nav>
@@ -79,7 +60,7 @@
                         </div>
                         <label for="pais1" class="form-label mt-4">Primer país</label><br>
                         <!-- <input type="text" class="form-control" name="pais" placeholder="Insertar País"> -->
-                        <select name="pais2" id="pos">
+                        <select name="pais1" id="pos">
                             <option value="1" selected>Qatar</option>
                             <option value="2">Ecuador</option>
                             <option value="3">Senegal</option>
