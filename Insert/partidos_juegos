@@ -1,0 +1,7 @@
+INSERT INTO `partidos_juegos` (`id_partido`, `id_equipo`, `gol_equipo`) 
+VALUES ('1', '1', '0'), 
+('1', '2', '2');
+
+
+
+los valores se pueden separar por coma
