@@ -2664,6 +2664,13 @@ else{
 </body>
 
 <style>
+body {
+      background: url(https://regionweek.com/wp-content/uploads/2022/11/gghhhh.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;}
+
   img{
     max-width: 50px; 
     max-height: 50px;
