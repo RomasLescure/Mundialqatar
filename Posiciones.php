@@ -316,7 +316,6 @@
       <tbody>
         <tr class="table-warning">
           <th scope="row"><?php echo $mostra['pais'] ?></th>
-          <td><?php echo $mostra['puntos']  ?></td>
           <td><?php echo $mostra['puntos'] ?></td>
           <td><?php echo $mostra['jj'] ?></td>
           <td><?php echo $mostra['jg'] ?></td>
@@ -357,7 +356,6 @@
       <tbody>
         <tr class="table-warning">
           <th scope="row"><?php echo $mostra['pais'] ?></th>
-          <td><?php echo $mostra['puntos']  ?></td>
           <td><?php echo $mostra['puntos'] ?></td>
           <td><?php echo $mostra['jj'] ?></td>
           <td><?php echo $mostra['jg'] ?></td>
