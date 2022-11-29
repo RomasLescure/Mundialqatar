@@ -37,29 +37,29 @@
                     <li class="nav-item">
                         <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
                     </li>
-                    
+
+                    <?php
+
+                    if (!empty($tipo)) {
+                        $_SESSION['type'] = $tipo;
+                    }
+                    if (isset($_SESSION['type']) && $_SESSION['type'] == 'admin') : ?>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="DatosPartido.php">Datos</a>
+                        </li>
+
+                    <?php endif; ?>
+                </ul>
                 <?php
-
-if (!empty($tipo)) {
-  $_SESSION['type'] = $tipo;
-}
-if (isset($_SESSION['type']) && $_SESSION['type'] == 'admin') : ?>
-
-  <li class="nav-item">
-    <a class="nav-link" href="DatosPartido.php">Datos</a>
-  </li>
-
-<?php endif; ?>
-</ul>
-<?php
-if (empty($_SESSION['user'])) : ?>
-<a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
-<a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
-<?php endif; ?>
-<?php
-if (!empty($_SESSION['user'])) : ?>
-<a href="logout.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Logout</button></a>
-<?php endif; ?>
+                if (empty($_SESSION['user'])) : ?>
+                    <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
+                    <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
+                <?php endif; ?>
+                <?php
+                if (!empty($_SESSION['user'])) : ?>
+                    <a href="logout.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Logout</button></a>
+                <?php endif; ?>
             </div>
         </div>
     </nav>
@@ -67,119 +67,121 @@ if (!empty($_SESSION['user'])) : ?>
     <h1 style="margin-left: 20px; text-align: center;">Información del mundial</h1>
     <br>
     <br>
-<div class="card border-danger mx-auto" style="width: 500px; margin: 0px 0px 100px 0px">
-  <div class="card-header">LLENE LOS CAMPOS</div>
-  <div class="card-body">
-    <div>
-        <form action="DaPartidoBD.php" method="post">
-            <div class="form-group">
-                <div class="form-group">
-                    <label for="partido" class="form-label mt-4">Número de Partido</label>
-                    <input type="text" class="form-control" name="partido" placeholder="Insertar Número de Partido">
-                </div>
-                <label for="pais1" class="form-label mt-4">Primer país</label><br>
-                <!-- <input type="text" class="form-control" name="pais" placeholder="Insertar País"> -->
-                <select name="pais1" id="pos" size="4">
-                    <option value="1" selected>Qatar</option>
-                    <option value="2">Ecuador</option>
-                    <option value="3">Senegal</option>
-                    <option value="4">Países Bajos</option>
+    <div class="card border-danger mx-auto" style="width: 500px; margin: 0px 0px 100px 0px">
+        <div class="card-header">LLENE LOS CAMPOS</div>
+        <div class="card-body">
+            <div>
+                <form action="DaPartidoBD.php" method="post">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="partido" class="form-label mt-4">Número de Partido</label>
+                            <input type="text" class="form-control" name="partido" placeholder="Insertar Número de Partido">
+                        </div>
+                        <label for="pais1" class="form-label mt-4">Primer país</label><br>
+                        <!-- <input type="text" class="form-control" name="pais" placeholder="Insertar País"> -->
+                        <select name="pais2" id="pos">
+                            <option value="1" selected>Qatar</option>
+                            <option value="2">Ecuador</option>
+                            <option value="3">Senegal</option>
+                            <option value="4">Países Bajos</option>
 
-                    <option value="5">Inglaterra</option>
-                    <option value="6">Irán</option>
-                    <option value="7">Estados Unidos</option>
-                    <option value="8">Gales</option>
+                            <option value="5">Inglaterra</option>
+                            <option value="6">Irán</option>
+                            <option value="7">Estados Unidos</option>
+                            <option value="8">Gales</option>
 
-                    <option value="9">Polonia</option>
-                    <option value="10">Argentina</option>
-                    <option value="11">Arabia Saudí</option>
-                    <option value="12">México</option>
+                            <option value="9">Argentina</option>
+                            <option value="10">Arabia Saudí</option>
+                            <option value="11">México</option>
+                            <option value="12">Polonia</option>
 
-                    <option value="13">Francia</option>
-                    <option value="14">Australia</option>
-                    <option value="15">Dinamarca</option>
-                    <option value="16">Túnez</option>
+                            <option value="13">Francia</option>
+                            <option value="14">Australia</option>
+                            <option value="15">Dinamarca</option>
+                            <option value="16">Túnez</option>
 
-                    <option value="17">España</option>
-                    <option value="18">Japón</option>
-                    <option value="19">Costa Rica</option>
-                    <option value="20">Alemania</option>
+                            <option value="17">España</option>
+                            <option value="18">Costa Rica</option>
+                            <option value="19">Alemania</option>
+                            <option value="20">Japón</option>
 
-                    <option value="21">Croacia</option>
-                    <option value="22">Marruecos</option>
-                    <option value="23">Bélgica</option>
-                    <option value="24">Canada</option>
+                            <option value="21">Bélgica</option>
+                            <option value="22">Canada</option>
+                            <option value="23">Marruecos</option>
+                            <option value="24">Croacia</option>
 
-                    <option value="25">Brasil</option>
-                    <option value="26">Suiza</option>
-                    <option value="27">Camerún</option>
-                    <option value="27">Serbia</option>
+                            <option value="25">Brasil</option>
+                            <option value="26">Serbia</option>
+                            <option value="27">Suiza</option>
+                            <option value="27">Camerún</option>
 
-                    <option value="29">Portugal</option>
-                    <option value="30">Ghana</option>
-                    <option value="31">Uruguay</option>
-                    <option value="32">Corea del Sur</option>
-                </select>
+                            <option value="29">Portugal</option>
+                            <option value="30">Ghana</option>
+                            <option value="31">Uruguay</option>
+                            <option value="32">Corea del Sur</option>
+                        </select>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goles1" class="form-label mt-4">Goles</label>
+                        <input type="text" class="form-control" name="goles1" placeholder="Insertar Goles Anotados">
+                    </div>
+                    <div class="form-group">
+                        <label for="pais2" class="form-label mt-4">Segundo País</label><br>
+                        <!-- <input type="text" class="form-control" name="pais" placeholder="Insertar País"> -->
+                        <select name="pais2" id="pos">
+                            <option value="1" selected>Qatar</option>
+                            <option value="2">Ecuador</option>
+                            <option value="3">Senegal</option>
+                            <option value="4">Países Bajos</option>
+
+                            <option value="5">Inglaterra</option>
+                            <option value="6">Irán</option>
+                            <option value="7">Estados Unidos</option>
+                            <option value="8">Gales</option>
+
+                            <option value="9">Argentina</option>
+                            <option value="10">Arabia Saudí</option>
+                            <option value="11">México</option>
+                            <option value="12">Polonia</option>
+
+                            <option value="13">Francia</option>
+                            <option value="14">Australia</option>
+                            <option value="15">Dinamarca</option>
+                            <option value="16">Túnez</option>
+
+                            <option value="17">España</option>
+                            <option value="18">Costa Rica</option>
+                            <option value="19">Alemania</option>
+                            <option value="20">Japón</option>
+
+                            <option value="21">Bélgica</option>
+                            <option value="22">Canada</option>
+                            <option value="23">Marruecos</option>
+                            <option value="24">Croacia</option>
+
+                            <option value="25">Brasil</option>
+                            <option value="26">Serbia</option>
+                            <option value="27">Suiza</option>
+                            <option value="27">Camerún</option>
+
+                            <option value="29">Portugal</option>
+                            <option value="30">Ghana</option>
+                            <option value="31">Uruguay</option>
+                            <option value="32">Corea del Sur</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="goles2" class="form-label mt-4">Goles</label>
+                        <input type="text" class="form-control" name="goles2" placeholder="Insertar Goles Anotados">
+                    </div>
+                    <br>
+                    <input type="submit" value="Guardar">
+                </form>
             </div>
-
-            <div class="form-group">
-                <label for="goles1" class="form-label mt-4">Goles</label>
-                <input type="text" class="form-control" name="goles1" placeholder="Insertar Goles Anotados">
-            </div>
-            <div class="form-group">
-                <label for="pais2" class="form-label mt-4">Segundo País</label><br>
-                <!-- <input type="text" class="form-control" name="pais" placeholder="Insertar País"> -->
-                <select name="pais2" id="pos" size="4">
-                    <option value="1" selected>Qatar</option>
-                    <option value="2">Ecuador</option>
-                    <option value="3">Senegal</option>
-                    <option value="4">Países Bajos</option>
-
-                    <option value="5">Inglaterra</option>
-                    <option value="6">Irán</option>
-                    <option value="7">Estados Unidos</option>
-                    <option value="8">Gales</option>
-
-                    <option value="9">Polonia</option>
-                    <option value="10">Argentina</option>
-                    <option value="11">Arabia Saudí</option>
-                    <option value="12">México</option>
-
-                    <option value="13">Francia</option>
-                    <option value="14">Australia</option>
-                    <option value="15">Dinamarca</option>
-                    <option value="16">Túnez</option>
-
-                    <option value="17">España</option>
-                    <option value="18">Japón</option>
-                    <option value="19">Costa Rica</option>
-                    <option value="20">Alemania</option>
-
-                    <option value="21">Croacia</option>
-                    <option value="22">Marruecos</option>
-                    <option value="23">Bélgica</option>
-                    <option value="24">Canada</option>
-
-                    <option value="25">Brasil</option>
-                    <option value="26">Suiza</option>
-                    <option value="27">Camerún</option>
-                    <option value="27">Serbia</option>
-
-                    <option value="29">Portugal</option>
-                    <option value="30">Ghana</option>
-                    <option value="31">Uruguay</option>
-                    <option value="32">Corea del Sur</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="goles2" class="form-label mt-4">Goles</label>
-                <input type="text" class="form-control" name="goles2" placeholder="Insertar Goles Anotados">
-            </div>
-            <br>
-            <input type="submit" value="Guardar">
-        </form>
         </div>
     </div>
-</div>
 </body>
+
 </html>
