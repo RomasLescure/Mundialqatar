@@ -68,8 +68,6 @@ if (!empty($_SESSION['user'])) {
 
           <?php endif;  ?>
         </ul>
-<<<<<<< Updated upstream
-=======
         <?php
         if (empty($_SESSION['user'])):?>
           <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
@@ -79,7 +77,6 @@ if (!empty($_SESSION['user'])) {
         if (!empty($_SESSION['user'])):?>
        <a href="logout.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Logout</button></a>
        <?php  endif;?>
->>>>>>> Stashed changes
       </div>
     </div>
   </nav>
@@ -88,7 +85,7 @@ if (!empty($_SESSION['user'])) {
     <br>
   <h4>¡APOYA A TU EQUIPO!</h4>
   <?php
-  $conn = mysqli_connect('localhost', 'root', '', 'datos_mundial');
+  $con = mysqli_connect('localhost', 'root', '', 'datos_mundial');
   $id_equipo = 0;
 
   if (isset($_GET['id_equipo'])) {
@@ -101,7 +98,7 @@ if (!empty($_SESSION['user'])) {
   $q = $con->query($sql);
 
   if ($q->num_rows > 0) {
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($con, $sql);
     $mostra = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
   ?>
