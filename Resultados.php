@@ -9,7 +9,7 @@
   <title>Resultados</title>
 </head>
 
-<body>
+<body class="bg-light bg-gradient">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Qatar 2022</a>
@@ -29,13 +29,13 @@
             <span class="visually-hidden">(current)</span>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Tabla de posiciones por grupo</a>
+            <a class="nav-link" href="Posiciones.php">Tabla de posiciones por grupo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Favoritos</a>
+            <a class="nav-link" href="favoritos.php">Favoritos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Clasificaciones</a>
+            <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
           </li>
         </ul>
         <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
@@ -43,6 +43,7 @@
       </div>
     </div>
   </nav>
+  
   <br>
   <h1 style="margin-left: 20px">Resultados de partidos</h1>
   <form action="Resultados.php" method="post">
@@ -94,5 +95,7 @@
       </tbody>
   </table>
 </body>
+<style>
+</style>
 
 </html>
