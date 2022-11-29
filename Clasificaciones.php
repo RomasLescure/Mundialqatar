@@ -63,15 +63,17 @@ if (!empty($_SESSION['user'])) {
 
           <?php endif;  ?>
             </ul>
-            <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
-            <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
+            <?php
+        if (empty($_SESSION['user'])):?>
+          <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
+          <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
+       <?php  endif;?>
         </div>
         </div>
     </nav>
   <br>
   
-  <h1 style="text-align: center;">LLAVES Y CRUCES DE CLASIFICADOS</h1>
-  <div>
+  <h1 style="text-align: center; ">LLAVES Y CRUCES DE CLASIFICADOS</h1>
     <table class="table mx-auto">
         <tr>
             <th>
@@ -513,11 +515,13 @@ if (!empty($_SESSION['user'])) {
                             </tr>
                         </table>
                     </div>
-                </div>
             </th>
         </tr>
     </table>
     <section>
+    <div class="card border-info " style="margin: 70px 65px 70px 65px">
+    <div class="card-header" style="text-align: center; font-weight: bold; font-size: 25px;">ESQUEMA DE LLAVES DE CLASIFICADOS</div>
+    <div class="card-body">
       <div class='tournament' style="margin: 0px 60px 0px 60px">
         <ul class='round round-2'>
           <li class='spacer'>&nbsp;</li>
@@ -770,6 +774,8 @@ if (!empty($_SESSION['user'])) {
       </div>
     </section>
   </div>
+  </div>
+</div>
 </body>
 <style>
     body {
@@ -779,45 +785,6 @@ if (!empty($_SESSION['user'])) {
 }
 section {
   margin: 0 8px;
-}
-
-.header-text {
-    color: white;
-    background: linear-gradient(blue, navy);
-    border: double 5px white;
-    border-radius: 1em;
-    text-align: center;
-    padding: 5px 0;
-}
-.header-text h1, .header-text h6 {
-    margin: 0;
-}
-.header-text h1 {
-    font-size: 1.5em;
-}
-
-.half-circle-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.bottom-circle {
-  margin-top: -5px;
-  transform: rotate(180deg);
-}
-.top-circle {
-  margin-bottom: -5px;
-}
-.half-circle {
-    height: 50px; /* Alter here for height of circle segment */
-    overflow: hidden;
-}
-.half-circle > div {
-    width:400px; /* Alter here for circle diameter */
-    height:400px; /* Alter here for circle diameter */
-    border: 5px double white;
-    border-radius: 50%;
-    background: navy;
 }
 
 .tournament {
@@ -901,12 +868,12 @@ li.game-left {
 }
 li.game-bottom {
   border-bottom: 1px solid #aaa;
-  background-color: orange;
+  background-color: #e95420;
 }
 li.game-top {
   border: none;
   border-bottom: 1px solid #aaa;
-  background-color: orange;
+  background-color: #e95420;
 }
 li.game-left.spacer {
     border-right: 1px solid #aaa;
