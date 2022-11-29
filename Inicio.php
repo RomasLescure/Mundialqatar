@@ -32,7 +32,7 @@
                 <a class="nav-link" href="Posiciones.php">Tabla de posiciones por grupo</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Favoritos</a>
+                <a class="nav-link" href="favoritos.php">Favoritos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
@@ -47,7 +47,7 @@
 <div class="d-flex justify-content-between">
 
   <div class="animate__animated animate__fadeInUp">
-  <div class="card border-dark" style="max-width: 20rem; margin: 250px 0px 0px 80px">
+  <div class="card border-dark" style="max-width: 20rem; margin: 150px 0px 0px 80px">
   <div class="card-header">FIFA WORLD CUP</div>
   <div class="card-body">
     <h4 class="card-title">¡LLEGÓ QATAR 2022!</h4>
@@ -57,7 +57,7 @@
   </div></div></div>
   
   <div class="animate__animated animate__fadeInUp">
-  <div class="card border-dark" style="max-width: 20rem; margin: 250px 80px 0px 0px">
+  <div class="card border-dark" style="max-width: 20rem; margin: 150px 80px 0px 0px">
   <div class="card-header">QATAR 2022</div>
   <div class="card-body">
     <h4 class="card-title">¿ESTÁS LISTO?</h4>
@@ -67,7 +67,8 @@
 
 </div>
 
-      <style>
+
+<style>
 body { 
     background: url(https://images5.alphacoders.com/128/1288612.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -78,7 +79,8 @@ body {
 .card {
   border: 3px solid white;
 }
-
 </style>
+
 </body>
+
 </html>

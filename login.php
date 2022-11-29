@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Inicio</a>
+            <a class="nav-link" href="inicio.php">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="equipos.php">Equipos</a>
@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a class="nav-link" href="Posiciones.php">Tabla de posiciones por grupo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Favoritos</a>
+            <a class="nav-link" href="favoritos.php">Favoritos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <br>
           <input type="submit" value="Iniciar Sesión">
         </form>
-        <p>¿No tiene cuenta? <a href="registrar.php">Registrarse</a></p>
+        <p>¿No tiene cuenta? <a href="registrar.php" style="color: purple";>Registrarse</a></p>
       </div>
     </div>
   </div>
