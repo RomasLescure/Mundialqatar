@@ -68,28 +68,28 @@ $id_equipo = 0;
   $id_equipo = $_GET['id_equipo'];
   $_SESSION['id_equipo'] = $id_equipo;
 
-$sql = "SELECT * FROM (partidos p, equipos e, partidos_juegos pj ) WHERE e.id_equipo = $id_equipo AND e.id_equipo = ej.id_equipos";
+$sql = "SELECT * FROM (partidos_juegos pj, partidos p, equipos e)
+WHERE pj.id_partido = p.id_partido AND e.id_equipo = pj.id_equipo AND e.id_equipo = '$id_equipo' ";
 /*UPDATE usuarios
 SET id_equipo
 WHERE user = $user*/
 $result = mysqli_query($conn, $sql);
-    while ($mostra = mysqli_fetch_array($result)) {
+    $mostra = mysqli_fetch_array($result) 
      
     ?>
       <tbody>
-        <tr class="table-warning">
-          <th scope="row"><?php echo $mostra['pais'] ?></th>
-          <td><?php echo $mostra['puntos']  ?></td>
-          <td><?php echo $mostra['jj'] ?></td>
-          <td><?php echo $mostra['jg'] ?></td>
-          <td><?php echo $mostra['je'] ?></td>
-          <td><?php echo $mostra['jp'] ?></td>
-          <td><?php echo $mostra['ga'] ?></td>
-          <td><?php echo $mostra['gc'] ?></td>
-          <td><?php echo $mostra['dif'] ?></td>
-        </tr>
+      <tr class="table-warning">
+        <th scope="row"><?php echo $mostra[0]["estadio"] ?></th>
+        <td><?php echo $mostra[0]["hora"] ?></td>
+        <td><?php echo $mostra[0]["fecha"] ?></td>
+        <td><?php echo $mostra[0]["pais"] ?></td>
+        <td><?php echo $mostra[0]["gol_equipo"]  ?></td>
+        <td>-</td>
+        <td><?php echo $mostra[1]["gol_equipo"] ?></td>
+        <td><?php echo $mostra[1]["pais"] ?></td>
+      </tr>
       <?php
-    }
+    
 ?>
   </table> 
 
