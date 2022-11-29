@@ -57,6 +57,9 @@ if (!empty($_SESSION['user'])) {
           <li class="nav-item">
             <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="API.php">API</a>
+          </li>
           <?php
 
           if (!empty($tipo)) {
