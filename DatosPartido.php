@@ -25,17 +25,17 @@
                         <a class="nav-link" href="equipos.php">Equipos</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Resultados</a>
+                        <a class="nav-link" href="Resultados.php">Resultados</a>
                         <span class="visually-hidden">(current)</span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tabla de posiciones por grupo</a>
+                        <a class="nav-link" href="Posiciones.php">Tabla de posiciones por grupo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Favoritos</a>
+                        <a class="nav-link" href="favoritos.php">Favoritos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Clasificaciones</a>
+                        <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Datos</a>
@@ -107,7 +107,6 @@
                 <label for="goles1" class="form-label mt-4">Goles</label>
                 <input type="text" class="form-control" name="goles1" placeholder="Insertar Goles Anotados">
             </div>
-
             <div class="form-group">
                 <label for="pais2" class="form-label mt-4">Segundo País</label><br>
                 <!-- <input type="text" class="form-control" name="pais" placeholder="Insertar País"> -->

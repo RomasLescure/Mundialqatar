@@ -35,6 +35,9 @@
                 <a class="nav-link active" href="#">Clasificaciones</a>
                 <span class="visually-hidden">(current)</span>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="DatosPartido.php">Datos</a>
+            </li>
             </ul>
             <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
             <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
