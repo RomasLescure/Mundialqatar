@@ -1,7 +1,10 @@
 INSERT INTO `partidos_juegos` (`id_partido`, `id_equipo`, `gol_equipo`) 
-VALUES ('1', '1', '0'), 
-('1', '2', '2');
-
-
-
-los valores se pueden separar por coma
+VALUES ('1', '1', '0'), ('1', '2', '2');
+INSERT INTO `partidos_juegos` (`id_partido`, `id_equipo`, `gol_equipo`) 
+VALUES ('2', '5', '6'), ('2', '6', '2');
+INSERT INTO `partidos_juegos` (`id_partido`, `id_equipo`, `gol_equipo`) 
+VALUES ('2', '5', '6'), ('2', '6', '2');
+INSERT INTO `partidos_juegos` (`id_partido`, `id_equipo`, `gol_equipo`) 
+VALUES ('3', '3', '0'), ('3', '4', '2');
+INSERT INTO `partidos_juegos` (`id_partido`, `id_equipo`, `gol_equipo`) 
+VALUES ('4', '7', '1'), ('4', '8', '1');
