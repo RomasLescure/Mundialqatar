@@ -13,7 +13,6 @@ if (!empty($_SESSION['user'])) {
   $mostra = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
   $tipo = $mostra[0]["tipo"];
-
 }
 
 ?>
@@ -106,7 +105,6 @@ if (!empty($_SESSION['user'])) {
           <th scope="col">Fecha</th>
           <th scope="col">Equipo 1</th>
           <th scope="col">Goles Equipo 1</th>
-          <th scope="col"></th>
           <th scope="col">Goles Equipo 2</th>
           <th scope="col">Equipo 2</th>
 
@@ -119,30 +117,36 @@ if (!empty($_SESSION['user'])) {
 
       $q = $con->query($sql);
       if ($q->num_rows > 0) {
+        $i = 0;
+        $j = 1;
         $result = mysqli_query($con, $sql);
-        $mostra = mysqli_fetch_all($result, MYSQLI_ASSOC);
-      ?>
-        <tbody>
-          <tr class="table-danger">
-            <th scope="row"><?php echo $mostra[0]["estadio"] ?></th>
-            <td><?php echo $mostra[0]["hora"] ?></td>
-            <td><?php echo $mostra[0]["fecha"] ?></td>
-            <td><?php echo $mostra[0]["pais"] ?></td>
-            <td><?php echo $mostra[0]["gol_equipo"]  ?></td>
-            <td>-</td>
-            <td><?php echo $mostra[1]["gol_equipo"] ?></td>
-            <td><?php echo $mostra[1]["pais"] ?></td>
-          </tr>
-        </tbody>
-    </table>
-  <?php
+        foreach ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC) as $valor) {
+
+          echo "<tr>";
+
+          echo "<td>" . $mostra[$i]["estadio"] . "</td>";
+          echo "<td>" . $mostra[$i]["hora"] . "</td>";
+          echo "<td>" . $mostra[$i]["fecha"] . "</td>";
+          echo "<td>" . $mostra[$i]["pais"] . "</td>";
+          echo "<td>" . $mostra[$i]["gol_equipo"] . "</td>";
+          echo "<td>" . $mostra[$j]["gol_equipo"] . "</td>";
+          echo "<td>" . $mostra[$j]["pais"] . "</td>";
+          echo "</tr>";
+
+          $i = $i + 2;
+          $j = $j + 2;
+
+          ini_set('display_errors', 0);
+          ini_set('display_startup_errors', 0);
+        }
+        echo "</table>";
       } else {
-  ?>
-    <label for="fecha" style="margin-left: 20px">Esta información aun no se encuentra registrada</label>
-<?php
+      ?>
+        <label for="fecha" style="margin-left: 20px">Esta información aun no se encuentra registrada</label>
+    <?php
       }
     }
-?>
+    ?>
 
 
 </body>
