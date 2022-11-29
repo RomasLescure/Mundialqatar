@@ -2,7 +2,6 @@
 
 session_start();
 if (!empty($_SESSION['user'])) {
-  echo 'Te haz logueado como: ' . $_SESSION['user'] . '<br />';
 
   $user = $_SESSION['user'];
 
@@ -15,7 +14,7 @@ if (!empty($_SESSION['user'])) {
 
   $tipo = $mostra[0]["tipo"];
 
-  echo $tipo;
+
 }
 
 ?>
@@ -61,9 +60,15 @@ if (!empty($_SESSION['user'])) {
           <li class="nav-item">
             <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="DatosPartido.php">Datos</a>
+          <?php
+          $_SESSION['type'] = $tipo;
+          if($_SESSION['type'] == 'admin'): ?>
+
+            <li class="nav-item">
+                <a class="nav-link" href="DatosPartido.php">Datos</a>
           </li>
+
+          <?php endif;  ?>
         </ul>
         <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
         <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
