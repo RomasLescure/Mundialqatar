@@ -60,13 +60,13 @@ if (!empty($_SESSION['user'])) {
           if (!empty($tipo)) {
             $_SESSION['type'] = $tipo;
           }
-          if (isset($_SESSION['type']) && $_SESSION['type'] == 'admin') : ?>
+          if ($_SESSION['type'] == 'admin') : ?>
 
             <li class="nav-item">
               <a class="nav-link" href="DatosPartido.php">Datos</a>
             </li>
 
-          <?php endif; ?>
+          <?php endif;  ?>
         </ul>
         <?php
         if (empty($_SESSION['user'])) : ?>
@@ -84,55 +84,57 @@ if (!empty($_SESSION['user'])) {
   <p><a href="equipos.php"></a>
     <br>
   <h4>¡APOYA A TU EQUIPO!</h4>
-  <?php
-  $con = mysqli_connect('localhost', 'root', '', 'datos_mundial');
-  $id_equipo = 0;
+  <table class="table table-hover " style="position: left" ;>
+    <thead>
+      <tr>
+      <tr class="table-dark">
+        <th scope="col">ESTADIO</th>
+        <th scope="col">FECHA</th>
+        <th scope="col">HORA</th>
+        <th scope="row">EQUIPO FAVORITO</th>
+        <th scope="col">GOLES A FAVOR</th>
+        <th scope="col">GOLES EN CONTRA</th>
+      </tr>
+    </thead>
 
-  if (isset($_GET['id_equipo'])) {
-    $id_equipo = $_GET['id_equipo'];
-  }
+    <?php
+    $con = mysqli_connect('localhost', 'root', '', 'datos_mundial');
+    $id_equipo = 0;
 
-  $_SESSION['id_equipo'] = $id_equipo;
-  $sql = "SELECT * FROM (partidos_juegos pj, partidos p, equipos e, equipos_juegos ej)
+    if (isset($_GET['id_equipo'])) {
+      $id_equipo = $_GET['id_equipo'];
+    }
+
+    $_SESSION['id_equipo'] = $id_equipo;
+    $sql = "SELECT * FROM (partidos_juegos pj, partidos p, equipos e, equipos_juegos ej)
     WHERE pj.id_partido = p.id_partido AND e.id_equipo = pj.id_equipo AND e.id_equipo = ej.id_equipos AND e.id_equipo ='$id_equipo'";
-  $q = $con->query($sql);
+    $q = $con->query($sql);
+    $i = 0;
 
-  if ($q->num_rows > 0) {
-    $result = mysqli_query($con, $sql);
-    $mostra = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    if ($q->num_rows > 0) {
+      $result = mysqli_query($con, $sql);
+      foreach ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC) as $valor) {
+        echo "<tr class='table-warning'>";
+        echo "<th scope='row'>" . $mostra[$i]["estadio"] . "</td>";
+        echo "<td>" . $mostra[$i]["hora"] . "</td>";
+        echo "<td>" . $mostra[$i]["fecha"] . "</td>";
+        echo "<td>" . $mostra[$i]["pais"] . "</td>";
+        echo "<td>" . $mostra[$i]["ga"] . "</td>";
+        echo "<td>" . $mostra[$i]["gc"] . "</td>";
+        echo "</tr>";
 
-  ?>
-    <table class="table table-hover " style="position: left" ;>
-      <thead>
-        <tr>
-        <tr class="table-dark">
-          <th scope="col">ESTADIO</th>
-          <th scope="col">FECHA</th>
-          <th scope="col">HORA</th>
-          <th scope="row">EQUIPO FAVORITO</th>
-          <th scope="col">GOLES A FAVOR</th>
-          <th scope="col"></th>
-          <th scope="col">GOLES EN CONTRA</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="table-warning">
-          <th scope="row"><?php echo $mostra[0]["estadio"] ?></th>
-          <td><?php echo $mostra[0]["hora"] ?></td>
-          <td><?php echo $mostra[0]["fecha"] ?></td>
-          <td><?php echo $mostra[0]["pais"] ?></td>
-          <td><?php echo $mostra[0]["ga"]  ?></td>
-          <td>-</td>
-          <td><?php echo $mostra[0]["gc"] ?></td>
-        </tr>
-    </table>
-  <?php
-  } else {
-  ?>
-    <label for="usesr" class="form-label mt-4">No has seleccionado un favorito</label>
-  <?php
-  }
-  ?>
+        $i = $i + 1;
+      }
+
+    ?>
+  </table>
+<?php
+    } else {
+?>
+  <label for="usesr" class="form-label mt-4">No has seleccionado un favorito</label>
+<?php
+    }
+?>
 
 </body>
 

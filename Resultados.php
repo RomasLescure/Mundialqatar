@@ -122,9 +122,8 @@ if (!empty($_SESSION['user'])) {
         $result = mysqli_query($con, $sql);
         foreach ($mostra = mysqli_fetch_all($result, MYSQLI_ASSOC) as $valor) {
 
-          echo "<tr>";
-
-          echo "<td>" . $mostra[$i]["estadio"] . "</td>";
+          echo "<tr class='table-warning'>";
+          echo "<th scope='row'>" . $mostra[$i]["estadio"] . "</td>";
           echo "<td>" . $mostra[$i]["hora"] . "</td>";
           echo "<td>" . $mostra[$i]["fecha"] . "</td>";
           echo "<td>" . $mostra[$i]["pais"] . "</td>";
@@ -140,6 +139,7 @@ if (!empty($_SESSION['user'])) {
           ini_set('display_startup_errors', 0);
         }
         echo "</table>";
+        unset($valor);
       } else {
       ?>
         <label for="fecha" style="margin-left: 20px">Esta información aun no se encuentra registrada</label>
