@@ -94,7 +94,7 @@
                             <option value="25">Brasil</option>
                             <option value="26">Serbia</option>
                             <option value="27">Suiza</option>
-                            <option value="27">Camerún</option>
+                            <option value="28">Camerún</option>
 
                             <option value="29">Portugal</option>
                             <option value="30">Ghana</option>
@@ -145,7 +145,7 @@
                             <option value="25">Brasil</option>
                             <option value="26">Serbia</option>
                             <option value="27">Suiza</option>
-                            <option value="27">Camerún</option>
+                            <option value="28">Camerún</option>
 
                             <option value="29">Portugal</option>
                             <option value="30">Ghana</option>
