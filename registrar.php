@@ -35,7 +35,7 @@
                 <a class="nav-link" href="favoritos.php">Favoritos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Clasificaciones</a>
+                <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
               </li>
             </ul>
           </div>
