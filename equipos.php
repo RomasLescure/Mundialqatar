@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Equipos</title>
+</head>
+<body>
 <?php
 
 session_start();
@@ -14,18 +24,7 @@ if (!empty($_SESSION['user'])) {
 
   $tipo = $mostra[0]["tipo"];
 }
-
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <title>Equipos</title>
-</head>
-<body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Qatar 2022</a>
@@ -2673,7 +2672,15 @@ body {
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;}
-
+h1{
+  font-weight: 950;
+  font-size: 50px;
+    background-image: linear-gradient(to right, #553c9a 0.06%, #ee4b2b);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+}
   img{
     max-width: 50px; 
     max-height: 50px;
