@@ -780,7 +780,7 @@ if (!empty($_SESSION['user'])) {
 <style>
     body {
   background-color: #eee;
-  font-family: Tahoma, Arial, sans-serif;
+
   margin: 0;
 }
 section {

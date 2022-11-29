@@ -78,7 +78,6 @@ if (!empty($_SESSION['user'])) {
     
       <div class="card text-white bg-success grupos" >
       <div class="card-header"><h2>Qatar  <img src="https://i.pinimg.com/originals/ef/3c/16/ef3c16f2d4b8d856f49fafa7e7b947c1.png"></h2></div>
-      <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 <?php
 $id_equipo = 0;
 ?>
@@ -90,52 +89,6 @@ $id_equipo = 0;
 
   </label>
 </a>
-
-
-<style> 
-    label {
-  /* Presentation */
-  font-size: 30px
-  }
-
-
-
-  label input[type="submit"] {
-    display: none;
-  }
-
-  .custom-checkbox {
-    margin-left: 2em;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .custom-checkbox .glyphicon {
-    color: gold;
-    position: absolute;
-    top: 0.4em;
-    left: -1.25em;
-    font-size: 0.75em;
-  }
-
-  .custom-checkbox .glyphicon-star-empty {
-    color: gray;
-  }
-
-  .custom-checkbox .glyphicon-star {
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-  }
-
-  .custom-checkbox:hover .glyphicon-star{
-    opacity: 0.5;
-  }
-
-  .custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
-    opacity: 1;
-  }
-</style>
-
       <table>
         <thead>
           <tr>
@@ -2671,7 +2624,9 @@ body {
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
-      background-size: cover;}
+      background-size: cover;
+    font-family: Helvetica;
+    }
 h1{
   font-weight: 950;
   font-size: 50px;
@@ -2685,6 +2640,7 @@ h1{
     max-width: 50px; 
     max-height: 50px;
   }
+  
   ul{
     max-width: 700px;
 
@@ -2701,5 +2657,42 @@ h1{
     margin: 10px 0px 0px 0px
   }
 
+  label {
+  /* Presentation */
+  font-size: 30px
+  }
+  
+  label input[type="submit"] {
+    display: none;
+  }
+  .custom-checkbox {
+    margin-left: 2em;
+    position: relative;
+    cursor: pointer;
+  }
+  .custom-checkbox .glyphicon {
+    color: gold;
+    position: absolute;
+    top: 0.4em;
+    left: -1.25em;
+    font-size: 0.75em;
+  }
+  .custom-checkbox .glyphicon-star-empty {
+    color: gray;
+  }
+  .custom-checkbox .glyphicon-star {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .custom-checkbox:hover .glyphicon-star{
+    opacity: 1;
+  }
+  .custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
+    opacity: 1;
+  }
+  span{
+    font-size: 25px;
+    color: #ffff;
+  }
 </style>
 </html>
