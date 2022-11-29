@@ -65,11 +65,6 @@ if (!empty($_SESSION['user'])) {
 
           <?php endif;  ?>
         </ul>
-        <?php
-        if (empty($_SESSION['user'])):?>
-          <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
-          <a href="registrar.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Register</button></a>
-       <?php  endif;?>
       </div>
     </div>
   </nav>
@@ -77,64 +72,55 @@ if (!empty($_SESSION['user'])) {
   <p><a href="equipos.php"></a>
     <br>
   <h4>¡APOYA A TU EQUIPO!</h4>
-  <table class="table table-hover " style="position: left" ;>
-    <thead>
-      <tr>
-      <tr class="table-dark">
-        <th scope="col">ESTADIO</th>
-        <th scope="col">FECHA</th>
-        <th scope="col">HORA</th>
-        <th scope="row">EQUIPO FAVORITO</th>
-        <th scope="col">GOLES A FAVOR</th>
-        <th scope="col"></th>
-        <th scope="col">GOLES EN CONTRA</th>
-        <!-- <th scope="col">CONTRINCANTE</th> -->
-      </tr>
-    </thead>
+  <?php
+  $conn = mysqli_connect('localhost', 'root', '', 'datos_mundial');
+  $id_equipo = 0;
 
-    <?php
-    $conn = mysqli_connect('localhost', 'root', '', 'datos_mundial');
+  if (isset($_GET['id_equipo'])) {
+    $id_equipo = $_GET['id_equipo'];
+  }
 
+  $_SESSION['id_equipo'] = $id_equipo;
+  $sql = "SELECT * FROM (partidos_juegos pj, partidos p, equipos e, equipos_juegos ej)
+    WHERE pj.id_partido = p.id_partido AND e.id_equipo = pj.id_equipo AND e.id_equipo = ej.id_equipos AND e.id_equipo ='$id_equipo'";
+  $q = $con->query($sql);
 
+  if ($q->num_rows > 0) {
+    $result = mysqli_query($conn, $sql);
+    $mostra = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    try {
-      $id_equipo = 0;
-      $id_equipo = $_GET['id_equipo'];
-      $_SESSION['id_equipo'] = $id_equipo;
-    } catch (Exception $e) {
-      echo 'Excepción capturada';
-    }
-
-    $sql = "SELECT * FROM (partidos_juegos pj, partidos p, equipos e)
-    WHERE pj.id_partido = p.id_partido AND e.id_equipo = pj.id_equipo AND e.id_equipo = '$id_equipo'";
-    $q = $con->query($sql);
-
-    if ($q->num_rows > 0) {
-      $result = mysqli_query($conn, $sql);
-      $mostra = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-    ?>
+  ?>
+    <table class="table table-hover " style="position: left" ;>
+      <thead>
+        <tr>
+        <tr class="table-dark">
+          <th scope="col">ESTADIO</th>
+          <th scope="col">FECHA</th>
+          <th scope="col">HORA</th>
+          <th scope="row">EQUIPO FAVORITO</th>
+          <th scope="col">GOLES A FAVOR</th>
+          <th scope="col"></th>
+          <th scope="col">GOLES EN CONTRA</th>
+        </tr>
+      </thead>
       <tbody>
         <tr class="table-warning">
           <th scope="row"><?php echo $mostra[0]["estadio"] ?></th>
           <td><?php echo $mostra[0]["hora"] ?></td>
           <td><?php echo $mostra[0]["fecha"] ?></td>
           <td><?php echo $mostra[0]["pais"] ?></td>
-          <td><?php echo $mostra[0]["gol_equipo"]  ?></td>
+          <td><?php echo $mostra[0]["ga"]  ?></td>
           <td>-</td>
-          <td><?php echo $mostra[1]["gol_equipo"] ?></td>
-          <!-- <td><?php //echo $mostra[1]["pais"] 
-                    ?></td> -->
+          <td><?php echo $mostra[0]["gc"] ?></td>
         </tr>
-  </table>
-<?php
-    } else {
-?>
-  <label for="usesr" class="form-label mt-4">No has seleccionado un favorito</label>
-<?php
-    }
-?>
-
+    </table>
+  <?php
+  } else {
+  ?>
+    <label for="usesr" class="form-label mt-4">No has seleccionado un favorito</label>
+  <?php
+  }
+  ?>
 
 </body>
 
