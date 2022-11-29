@@ -263,7 +263,7 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=3">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
@@ -343,7 +343,7 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=4">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
@@ -423,7 +423,7 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=5">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
@@ -500,6 +500,23 @@ else{
       </div>
       <div class="card text-white bg-success grupos" >
       <div class="card-header"><h2>Iran <img src="data:image/png;base64,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"></h2></div>
+      <?php
+  $id_equipo = 0;
+    ?>
+    <a href="favoritos.php?id_equipo=6">
+    <label for="id-of-input" class="custom-checkbox">
+      <i class="glyphicon glyphicon-star-empty"></i>
+      <i class="glyphicon glyphicon-star"></i>
+    <?php
+    if($_SESSION['id_equipo'] = 6){
+    }
+    else{
+      
+    }
+      ?>
+      <span>Favorito</span>
+      </label>
+    </a>  
       <table>
         <thead>
           <tr>
@@ -566,12 +583,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=7">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 6){
+if($_SESSION['id_equipo'] = 7){
 }
 else{
   
@@ -646,12 +663,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=8">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 7){
+if($_SESSION['id_equipo'] = 8){
 }
 else{
   
@@ -726,12 +743,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=9">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 8){
+if($_SESSION['id_equipo'] = 9){
 }
 else{
   
@@ -806,12 +823,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=10">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 9){
+if($_SESSION['id_equipo'] = 10){
 }
 else{
   
@@ -886,12 +903,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=11">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 10){
+if($_SESSION['id_equipo'] = 11){
 }
 else{
   
@@ -966,12 +983,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=12">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 11){
+if($_SESSION['id_equipo'] = 12){
 }
 else{
   
@@ -1046,12 +1063,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=13">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 12){
+if($_SESSION['id_equipo'] = 13){
 }
 else{
   
@@ -1126,12 +1143,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=14">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 13){
+if($_SESSION['id_equipo'] = 14){
 }
 else{
   
@@ -1206,12 +1223,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=15">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 14){
+if($_SESSION['id_equipo'] = 15){
 }
 else{
   
@@ -1286,12 +1303,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=16">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 15){
+if($_SESSION['id_equipo'] = 16){
 }
 else{
   
@@ -1366,12 +1383,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=17">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 16){
+if($_SESSION['id_equipo'] = 17){
 }
 else{
   
@@ -1446,12 +1463,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=18">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 17){
+if($_SESSION['id_equipo'] = 18){
 }
 else{
   
@@ -1526,12 +1543,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=19">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 18){
+if($_SESSION['id_equipo'] = 19){
 }
 else{
   
@@ -1606,12 +1623,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=20">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 19){
+if($_SESSION['id_equipo'] = 20){
 }
 else{
   
@@ -1686,12 +1703,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=21">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 20){
+if($_SESSION['id_equipo'] = 21){
 }
 else{
   
@@ -1766,12 +1783,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=22">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 21){
+if($_SESSION['id_equipo'] = 22){
 }
 else{
   
@@ -1846,12 +1863,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=23">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 22){
+if($_SESSION['id_equipo'] = 23){
 }
 else{
   
@@ -1926,12 +1943,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=24">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 23){
+if($_SESSION['id_equipo'] = 24){
 }
 else{
   
@@ -2006,12 +2023,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=25">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 24){
+if($_SESSION['id_equipo'] = 25){
 }
 else{
   
@@ -2086,12 +2103,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=26">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 25){
+if($_SESSION['id_equipo'] = 26){
 }
 else{
   
@@ -2166,12 +2183,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=27">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 26){
+if($_SESSION['id_equipo'] = 27){
 }
 else{
   
@@ -2246,12 +2263,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=28">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 27){
+if($_SESSION['id_equipo'] = 28){
 }
 else{
   
@@ -2326,12 +2343,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=29">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 28){
+if($_SESSION['id_equipo'] = 29){
 }
 else{
   
@@ -2406,12 +2423,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=30">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 29){
+if($_SESSION['id_equipo'] = 30){
 }
 else{
   
@@ -2486,12 +2503,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=31">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 30){
+if($_SESSION['id_equipo'] = 31){
 }
 else{
   
@@ -2566,12 +2583,12 @@ else{
       <?php
 $id_equipo = 0;
 ?>
-<a href="favoritos.php?id_equipo=2">
+<a href="favoritos.php?id_equipo=32">
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
 <?php
-if($_SESSION['id_equipo'] = 31){
+if($_SESSION['id_equipo'] = 32){
 }
 else{
   
