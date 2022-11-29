@@ -70,6 +70,24 @@ if (
         $afavor = $afavor + $goles1;
         $contra = $contra + $goles2;
         $diferencia = abs($afavor - $contra);
+
+        $sql4 = "UPDATE equipos_juegos SET puntos = $puntos, 
+    jj = '$jugado',
+    jg='$ganado',
+    je = '$empate',
+    jp = '$perdido',
+    ga = '$afavor',
+    gc = '$contra',
+    dif = '$diferencia'
+    WHERE id_equipos = '$pais1'";
+
+        if ($con->query($sql4) === TRUE) {
+            echo "Se actualizó la tabla <br>";
+            // echo "<a href=index.php> volver a Formulario</a>";
+            // echo '<br><br><a href= "mostrar.php"> MOSTRAR TABLA</a>';
+        } else {
+            echo "Error: " . $sql4 . "<br>" . $con->error;
+        }
     } else {
         $jugado = 0;
         $ganado = 0;
@@ -94,26 +112,21 @@ if (
         $afavor = $afavor + $goles1;
         $contra = $contra + $goles2;
         $diferencia = abs($afavor - $contra);
+
+        $sql4 = "INSERT INTO equipos_juegos (id_equipos,puntos,jj,jg,je,jp,ga,gc,dif)
+        VALUES ('$pais1','$puntos', '$jugado','$ganado','$empate','$perdido','$afavor','$contra', '$diferencia')";
+
+        if ($con->query($sql4) === TRUE) {
+            echo "Se ingreso la tabla <br>";
+            // echo "<a href=index.php> volver a Formulario</a>";
+            // echo '<br><br><a href= "mostrar.php"> MOSTRAR TABLA</a>';
+        } else {
+            echo "Error: " . $sql4 . "<br>" . $con->error;
+        }
     }
 
     //Volver a ingresar a la tabla de equipos_juegos
-    $sql4 = "UPDATE equipos_juegos SET puntos = $puntos, 
-    jj = '$jugado',
-    jg='$ganado',
-    je = '$empate',
-    jp = '$perdido',
-    ga = '$afavor',
-    gc = '$contra',
-    dif = '$diferencia'
-    WHERE id_equipos = $pais1";
 
-    if ($con->query($sql4) === TRUE) {
-        echo "Se actualizó la tabla <br>";
-        // echo "<a href=index.php> volver a Formulario</a>";
-        // echo '<br><br><a href= "mostrar.php"> MOSTRAR TABLA</a>';
-    } else {
-        echo "Error: " . $sql4 . "<br>" . $con->error;
-    }
 
 
     //--------------------------------------SEGUNDO PAÍS---------------------------------------------------------
@@ -149,6 +162,24 @@ if (
         $afavor = $afavor + $goles1;
         $contra = $contra + $goles2;
         $diferencia = abs($afavor - $contra);
+
+        $sql6 = "UPDATE equipos_juegos SET puntos = $puntos, 
+    jj = '$jugado',
+    jg='$ganado',
+    je = '$empate',
+    jp = '$perdido',
+    ga = '$afavor',
+    gc = '$contra',
+    dif = '$diferencia'
+    WHERE id_equipos = '$pais2'";
+
+        if ($con->query($sql6) === TRUE) {
+            echo "Se actualizó la tabla <br>";
+            // echo "<a href=index.php> volver a Formulario</a>";
+            // echo '<br><br><a href= "mostrar.php"> MOSTRAR TABLA</a>';
+        } else {
+            echo "Error: " . $sql6 . "<br>" . $con->error;
+        }
     } else {
         $jugado = 0;
         $ganado = 0;
@@ -173,26 +204,21 @@ if (
         $afavor = $afavor + $goles1;
         $contra = $contra + $goles2;
         $diferencia = abs($afavor - $contra);
+
+        $sql6 = "INSERT INTO equipos_juegos (id_equipos,puntos,jj,jg,je,jp,ga,gc,dif)
+        VALUES ('$pais1','$puntos', '$jugado','$ganado','$empate','$perdido','$afavor','$contra', '$diferencia')";
+
+        if ($con->query($sql6) === TRUE) {
+            echo "Se ingreso la tabla <br>";
+            // echo "<a href=index.php> volver a Formulario</a>";
+            // echo '<br><br><a href= "mostrar.php"> MOSTRAR TABLA</a>';
+        } else {
+            echo "Error: " . $sql6 . "<br>" . $con->error;
+        }
     }
 
     //Volver a ingresar a la tabla de equipos_juegos
-    $sql6 = "UPDATE equipos_juegos SET puntos = $puntos, 
-    jj = '$jugado',
-    jg='$ganado',
-    je = '$empate',
-    jp = '$perdido',
-    ga = '$afavor',
-    gc = '$contra',
-    dif = '$diferencia'
-    WHERE id_equipos = $pais2";
 
-    if ($con->query($sql6) === TRUE) {
-        echo "Se actualizó la tabla <br>";
-        // echo "<a href=index.php> volver a Formulario</a>";
-        // echo '<br><br><a href= "mostrar.php"> MOSTRAR TABLA</a>';
-    } else {
-        echo "Error: " . $sql6 . "<br>" . $con->error;
-    }
 
 
 
