@@ -325,53 +325,53 @@
         </ul>
         <ul class='round round-3'>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-left game-top'>Florida</li>
-          <li class='game-left spacer region region-right'>East</li>
-          <li class='game-left game-bottom'>South Carolina</li>
+          <li class='game-left game-top'></li>
+          <li class='game-left spacer region region-right'></li>
+          <li class='game-left game-bottom'></li>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-left game-top'>Gonzaga</li>
-          <li class='game-left spacer region region-right'>West</li>
-          <li class='game-left game-bottom'>Xavier</li>
+          <li class='game-left game-top'></li>
+          <li class='game-left spacer region region-right'></li>
+          <li class='game-left game-bottom'></li>
           <li class='spacer'>&nbsp;</li>
         </ul>
         <ul class='round round-4'>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-left game-top'>South Carolina</li>
+          <li class='game-left game-top'></li>
           <li class='game-left spacer'>&nbsp;</li>
-          <li class='game-left game-bottom'>Gonzaga</li>
+          <li class='game-left game-bottom'></li>
           <li class='spacer'>&nbsp;</li>
         </ul>
         <ul class='round semi-final'>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-left game-top'>Gonzaga</li>
+          <li class='game-left game-top'></li>
           <li class='spacer'>&nbsp;</li>
         </ul>
         <ul class='round finals'>
           <li class='spacer'>&nbsp;</li>
-          <li class='game final'>North Carolina</li>
+          <li class='game final'></li>
           <li class='spacer'>&nbsp;</li>
         </ul>
         <ul class='round semi-final'>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-right game-top'>North Carolina</li>
+          <li class='game-right game-top'></li>
           <li class='spacer'>&nbsp;</li>
         </ul>
         <ul class='round round-4'>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-right game-top'>Oregon</li>
+          <li class='game-right game-top'></li>
           <li class='game-right spacer'>&nbsp;</li>
-          <li class='game-right game-bottom'>North Carolina</li>
+          <li class='game-right game-bottom'></li>
           <li class='spacer'>&nbsp;</li>
         </ul>
         <ul class='round round-3'>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-right game-top'>Kansas</li>
-          <li class='game-right spacer region region-left'>Midwest</li>
-          <li class='game-right game-bottom'>Oregon</li>
+          <li class='game-right game-top'></li>
+          <li class='game-right spacer region region-left'></li>
+          <li class='game-right game-bottom'></li>
           <li class='spacer'>&nbsp;</li>
-          <li class='game-right game-top'>North Carolina</li>
-          <li class='game-right spacer region region-left'>South</li>
-          <li class='game-right game-bottom'>Kentucky</li>
+          <li class='game-right game-top'></li>
+          <li class='game-right spacer region region-left'></li>
+          <li class='game-right game-bottom'></li>
           <li class='spacer'>&nbsp;</li>
         </ul>
         <ul class='round round-2'>
@@ -527,10 +527,12 @@ li.game-left {
 }
 li.game-bottom {
   border-bottom: 1px solid #aaa;
+  background-color: orange;
 }
 li.game-top {
   border: none;
   border-bottom: 1px solid #aaa;
+  background-color: orange;
 }
 li.game-left.spacer {
     border-right: 1px solid #aaa;
