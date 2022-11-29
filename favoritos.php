@@ -29,11 +29,10 @@
             <a class="nav-link" href="Posiciones.php">Tabla de posiciones por grupo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="favoritos.php">Favoritos</a>
-            <span class="visually-hidden">(current)</span>
+            <a class="nav-link" href="favoritos.php">Favoritos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
+            <a class="nav-link" href="#">Clasificaciones</a>
           </li>
         </ul>
       </div>

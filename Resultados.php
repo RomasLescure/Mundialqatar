@@ -73,19 +73,7 @@
     </thead>
     <?php
 
-    $sql = "SELECT * FROM partidos WHERE (fecha = '$fechaform')";
-
-    // $sql = "SELECT * 
-    // FROM (partidos p, equipos e) 
-    // WHERE (p.fecha = '$fechaform') 
-    //   AND (e.id_equipos = p.id_equipo1)
-    //   OR (e.id_equipos = p.id_equipo2) 
-    //   ";
-
-    // SELECT p.nombre, m.nombre_mov 
-    // FROM movimiento m, pokedex p, movimiento_poke mp
-    // WHERE (p.id_pokemon = mp.id_pokemon) AND (mp.id_mov = m.id_mov);
-
+    $sql = "SELECT * FROM partidos WHERE fecha = '$fechaform'";
     $result = mysqli_query($conn, $sql);
 
     while ($mostra = mysqli_fetch_array($result)) {

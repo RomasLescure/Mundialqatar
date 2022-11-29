@@ -1,5 +1,0 @@
-INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
-VALUES (NULL, 'Al Bayt', '2022-11-20', '17:00');
-
-INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
-VALUES (NULL, 'Al Thumama', '2022-11-21', '17:00');
