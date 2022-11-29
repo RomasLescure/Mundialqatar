@@ -88,7 +88,7 @@ if (!empty($_SESSION['user'])) {
       </tr>
     </thead>
     <?php
-    session_start();
+ 
     $conn = mysqli_connect('localhost', 'root', '', 'datos_mundial');
     $id_equipo = 0;
 
