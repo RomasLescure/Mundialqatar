@@ -28,7 +28,7 @@
             <a class="nav-link" href="resultados.php">Resultados</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="Posiciones.php">Tabla de posiciones por e.grupo</a>
+            <a class="nav-link active" href="Posiciones.php">Tabla de posiciones por grupo</a>
             <span class="visually-hidden">(current)</span>
           </li>
           <li class="nav-item">
@@ -38,7 +38,7 @@
             <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
           </li>
           <li class="nav-item">
-                <a class="nav-link" href="DatosPartido.php">Datos</a>
+            <a class="nav-link" href="DatosPartido.php">Datos</a>
           </li>
         </ul>
         <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
@@ -71,14 +71,14 @@
       </tr>
     </thead>
     <?php
-  /*
+    /*
   Pais(equipos) /Puntos(equipos_juegos)  /Juegos /Jugados  /Juegos Ganados /Juegos Empatados 
   /Juegos Perdidos /Goles a favor /Goles En contra / Diferencia de goles
   */
     $sql = "SELECT * FROM (equipos_juegos ej,equipos e) WHERE e.grupo = 'A' AND ej.id_equipos = e.id_equipo";
     $result = mysqli_query($conn, $sql);
     while ($mostra = mysqli_fetch_array($result)) {
-     
+
     ?>
       <tbody>
         <tr class="table-warning">
@@ -117,7 +117,7 @@
     $sql = "SELECT * FROM (equipos_juegos ej,equipos e)  WHERE e.grupo = 'B' AND ej.id_equipos = e.id_equipo";
     $result = mysqli_query($conn, $sql);
     while ($mostra = mysqli_fetch_array($result)) {
-     
+
     ?>
       <tbody>
         <tr class="table-warning">
@@ -156,7 +156,7 @@
     $sql = "SELECT * FROM (equipos_juegos ej,equipos e)  WHERE e.grupo = 'C' AND ej.id_equipos = e.id_equipo";
     $result = mysqli_query($conn, $sql);
     while ($mostra = mysqli_fetch_array($result)) {
-     
+
     ?>
       <tbody>
         <tr class="table-warning">
@@ -196,7 +196,7 @@
     $result = mysqli_query($conn, $sql);
 
     while ($mostra = mysqli_fetch_array($result)) {
-     
+
     ?>
       <tbody>
         <tr class="table-warning">
@@ -235,7 +235,7 @@
     $sql = "SELECT * FROM (equipos_juegos ej,equipos e)  WHERE e.grupo = 'E' AND ej.id_equipos = e.id_equipo";
     $result = mysqli_query($conn, $sql);
     while ($mostra = mysqli_fetch_array($result)) {
-     
+
     ?>
       <tbody>
         <tr class="table-warning">
@@ -275,7 +275,7 @@
     $result = mysqli_query($conn, $sql);
 
     while ($mostra = mysqli_fetch_array($result)) {
-     
+
     ?>
       <tbody>
         <tr class="table-warning">
@@ -314,7 +314,7 @@
     $sql = "SELECT * FROM (equipos_juegos ej,equipos e)  WHERE e.grupo = 'G' AND ej.id_equipos = e.id_equipo";
     $result = mysqli_query($conn, $sql);
     while ($mostra = mysqli_fetch_array($result)) {
-     
+
     ?>
       <tbody>
         <tr class="table-warning">
@@ -354,7 +354,7 @@
     $sql = "SELECT * FROM (equipos_juegos ej,equipos e)  WHERE e.grupo = 'H' AND ej.id_equipos = e.id_equipo";
     $result = mysqli_query($conn, $sql);
     while ($mostra = mysqli_fetch_array($result)) {
-     
+
     ?>
       <tbody>
         <tr class="table-warning">

@@ -57,49 +57,59 @@
 
   <?php
 
-  $fechaform = $_POST['fechaform'];
-  echo $fechaform;
+  $con = mysqli_connect('localhost', 'root', '', 'datos_mundial');
 
-  $conn = mysqli_connect('localhost', 'root', '', 'datos_mundial');
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $fechaform = $_POST['fechaform'];
+
   ?>
-  <table class="table table-hover" style="position: absolute; top: 50%; margin: 0px 20px 0px 20px;">
-    <thead>
-      <tr>
-        <th scope="col">Estadio</th>
-        <th scope="col">Hora</th>
-        <th scope="col">Fecha</th>
-        <th scope="col">Equipo 1</th>
-        <th scope="col">Goles Equipo 1</th>
-        <th scope="col"></th>
-        <th scope="col">Goles Equipo 2</th>
-        <th scope="col">Equipo 2</th>
+    <table class="table table-hover" style="position: absolute; top: 50%; margin: 0px 20px 0px 20px;">
+      <thead>
+        <tr>
+          <th scope="col">Estadio</th>
+          <th scope="col">Hora</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Equipo 1</th>
+          <th scope="col">Goles Equipo 1</th>
+          <th scope="col"></th>
+          <th scope="col">Goles Equipo 2</th>
+          <th scope="col">Equipo 2</th>
 
-      </tr>
-    </thead>
-    <?php
+        </tr>
+      </thead>
+      <?php
 
-    $sql = "SELECT * FROM (partidos_juegos pj, partidos p, equipos e)
+      $sql = "SELECT * FROM (partidos_juegos pj, partidos p, equipos e)
     WHERE pj.id_partido = p.id_partido AND e.id_equipo = pj.id_equipo AND p.fecha = '$fechaform'";
 
-    $result = mysqli_query($conn, $sql);
-    $mostra = mysqli_fetch_all($result, MYSQLI_ASSOC);
+      $q = $con->query($sql);
+      if ($q->num_rows > 0) {
+        $result = mysqli_query($con, $sql);
+        $mostra = mysqli_fetch_all($result, MYSQLI_ASSOC);
+      ?>
+        <tbody>
+          <tr class="table-danger">
+            <th scope="row"><?php echo $mostra[0]["estadio"] ?></th>
+            <td><?php echo $mostra[0]["hora"] ?></td>
+            <td><?php echo $mostra[0]["fecha"] ?></td>
+            <td><?php echo $mostra[0]["pais"] ?></td>
+            <td><?php echo $mostra[0]["gol_equipo"]  ?></td>
+            <td>-</td>
+            <td><?php echo $mostra[1]["gol_equipo"] ?></td>
+            <td><?php echo $mostra[1]["pais"] ?></td>
+          </tr>
+        </tbody>
+    </table>
+  <?php
+      } else {
+  ?>
+    <label for="fecha" style="margin-left: 20px">Esta información aun no se encuentra registrada</label>
+<?php
+      }
+    }
+?>
 
-    ?>
-    <tbody>
-      <tr class="table-danger">
-        <th scope="row"><?php echo $mostra[0]["estadio"] ?></th>
-        <td><?php echo $mostra[0]["hora"] ?></td>
-        <td><?php echo $mostra[0]["fecha"] ?></td>
-        <td><?php echo $mostra[0]["pais"] ?></td>
-        <td><?php echo $mostra[0]["gol_equipo"]  ?></td>
-        <td>-</td>
-        <td><?php echo $mostra[1]["gol_equipo"] ?></td>
-        <td><?php echo $mostra[1]["pais"] ?></td>
-      </tr>
-    </tbody>
-  </table>
+
 </body>
-<style>
-</style>
 
 </html>
