@@ -60,7 +60,7 @@ if (!empty($_SESSION['user'])) {
           if (!empty($tipo)) {
             $_SESSION['type'] = $tipo;
           }
-          if ($_SESSION['type'] == 'admin') : ?>
+          if (isset($_SESSION['type']) && $_SESSION['type'] == 'admin') : ?>
 
             <li class="nav-item">
               <a class="nav-link" href="DatosPartido.php">Datos</a>
