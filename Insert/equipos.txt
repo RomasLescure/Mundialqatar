@@ -1,0 +1,75 @@
+ALTER TABLE equipos AUTO_INCREMENT = 1;
+
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Qatar', 'A');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Ecuador', 'A');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Senegal', 'A');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Holanda', 'A');
+
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Inglaterra', 'B');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Irán', 'B');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Estados Unidos', 'B');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Gales', 'B');
+
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Argentina', 'C');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Arabia Saudí', 'C');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'México', 'C');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Polonia', 'C');
+
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Francia', 'D');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Australia', 'D');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Dinamarca', 'D');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Túnez', 'D');
+
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'España', 'E');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Costa Rica', 'E');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Alemania', 'E');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Japón', 'E');
+
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Bélgica', 'F');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Canada', 'F');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Marruecos', 'F');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Croacia', 'F');
+
+
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Brasil', 'G');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Serbia', 'G');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Suiza', 'G');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Camerún', 'G');
+
+
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'PorTugal', 'H');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Ghana', 'H');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Uruguay', 'H');
+INSERT INTO `equipos` (`id_equipo`, `pais`, `grupo`) 
+VALUES (NULL, 'Corea del Sur', 'H');
