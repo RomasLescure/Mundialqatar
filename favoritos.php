@@ -35,6 +35,9 @@
           <li class="nav-item">
             <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
           </li>
+          <li class="nav-item">
+                <a class="nav-link" href="DatosPartido.php">Datos</a>
+          </li>
         </ul>
       </div>
     </div>

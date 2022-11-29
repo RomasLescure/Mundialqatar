@@ -24,8 +24,8 @@
           <li class="nav-item">
             <a class="nav-link" href="equipos.php">Equipos</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Resultados</a>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Resultados</a>
             <span class="visually-hidden">(current)</span>
           </li>
           <li class="nav-item">
@@ -36,6 +36,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
+          </li>
+          <li class="nav-item">
+                <a class="nav-link" href="DatosPartido.php">Datos</a>
           </li>
         </ul>
         <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
