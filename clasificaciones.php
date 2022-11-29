@@ -45,7 +45,7 @@
         </div>
     </nav>
   <br>
-  <h1>Tabla de clasificación de octavos</h1>
+  <h1 style="text-align: center;">LLAVES Y CRUCES DE CLASIFICADOS</h1>
   <div>
     <table class="table mx-auto">
         <tr>
