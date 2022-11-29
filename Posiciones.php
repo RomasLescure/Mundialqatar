@@ -28,14 +28,14 @@
             <a class="nav-link" href="resultados.php">Resultados</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Tabla de posiciones por grupo</a>
+            <a class="nav-link" href="Posiciones.php">Tabla de posiciones por grupo</a>
             <span class="visually-hidden">(current)</span>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Favoritos</a>
+            <a class="nav-link" href="favoritos.php">Favoritos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Clasificaciones</a>
+            <a class="nav-link" href="clasificaciones.php">Clasificaciones</a>
           </li>
         </ul>
         <a href="login.php"><button type="button" class="btn btn-secondary" style="margin: 0px 5px 0px 5px;">Login</button></a>
