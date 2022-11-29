@@ -487,6 +487,16 @@ $id_equipo = 0;
 <label for="id-of-input" class="custom-checkbox">
   <i class="glyphicon glyphicon-star-empty"></i>
   <i class="glyphicon glyphicon-star"></i>
+<?php
+if($_SESSION['id_equipo'] = 5){
+}
+else{
+  
+}
+  ?>
+  <span>Favorito</span>
+  </label>
+</a> 
       <table>
         <thead>
           <tr>
