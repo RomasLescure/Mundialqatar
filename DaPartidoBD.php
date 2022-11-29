@@ -206,7 +206,7 @@ if (
         $diferencia = abs($afavor - $contra);
 
         $sql6 = "INSERT INTO equipos_juegos (id_equipos,puntos,jj,jg,je,jp,ga,gc,dif)
-        VALUES ('$pais1','$puntos', '$jugado','$ganado','$empate','$perdido','$afavor','$contra', '$diferencia')";
+        VALUES ('$pais2','$puntos', '$jugado','$ganado','$empate','$perdido','$afavor','$contra', '$diferencia')";
 
         if ($con->query($sql6) === TRUE) {
             echo "Se ingreso la tabla <br>";
