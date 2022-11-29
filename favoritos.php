@@ -99,10 +99,12 @@ if (!empty($_SESSION['user'])) {
 
     <?php
     $con = mysqli_connect('localhost', 'root', '', 'datos_mundial');
+    $id_equipo = 0;
+
     if (isset($_GET['id_equipo'])) {
       $id_equipo = $_GET['id_equipo'];
     }
- ECHO $id_equipo;
+
     $_SESSION['id_equipo'] = $id_equipo;
     $sql = "SELECT * FROM (partidos_juegos pj, partidos p, equipos e, equipos_juegos ej)
     WHERE pj.id_partido = p.id_partido AND e.id_equipo = pj.id_equipo AND e.id_equipo = ej.id_equipos AND e.id_equipo ='$id_equipo'";
