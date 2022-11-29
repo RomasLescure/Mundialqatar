@@ -47,10 +47,12 @@
         </div>
     </nav>
     <br>
-    <h1 style="margin-left: 20px">Información del mundial</h1>
+    <h1 style="margin-left: 20px; text-align: center;">Información del mundial</h1>
     <br>
     <br>
-
+<div class="card border-danger mx-auto" style="width: 500px; margin: 0px 0px 100px 0px">
+  <div class="card-header">LLENE LOS CAMPOS</div>
+  <div class="card-body">
     <div>
         <form action="DaPartidoBD.php" method="post">
             <div class="form-group">
@@ -159,7 +161,8 @@
             <br>
             <input type="submit" value="Guardar">
         </form>
+        </div>
     </div>
+</div>
 </body>
-
 </html>
