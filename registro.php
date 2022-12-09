@@ -2,13 +2,13 @@
 if (
     isset($_POST['user']) && !empty($_POST['user']) &&
     isset($_POST['pass']) && !empty($_POST['pass']) &&
-    isset($_POST['tipo']) && !empty($_POST['tipo']) &&
-    isset($_POST['adminPass']) && !empty($_POST['adminPass'])
-) {
+    isset($_POST['tipo']) && !empty($_POST['tipo']) 
+    )
+ {
     $user = $_POST['user'];
     $pass = $_POST['pass'];
     $type = $_POST['tipo'];
-    $adminPass = $_POST['adminPass'];
+
     $host = 'localhost';
     $db = 'datos_mundial';
     $pw = '';
@@ -30,8 +30,8 @@ if (
         }
         $con->close();
     } else {
-
-     
+            isset($_POST['adminPass']) && !empty($_POST['adminPass']);
+            $adminPass = $_POST['adminPass'];
             if ($adminPass == "code") {
                 $sql = "INSERT INTO usuarios(user, pass, tipo)
                 VALUES ('$user','$pass','$type')";
