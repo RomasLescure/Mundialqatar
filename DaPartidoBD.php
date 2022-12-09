@@ -13,7 +13,10 @@ if (
     $pais2 = $_POST['pais2'];
     $goles2 = $_POST['goles2'];
 
-    if($partido > 0 && $partido < 65)
+ 
+    if(($pais1 != $pais2 )&&($goles1>0 && $goles2>0))
+    {
+        if($partido > 0 && $partido < 65)
     {
         //declaración de las variables para conexión
         $host = 'localhost';
@@ -135,6 +138,7 @@ if (
     
         //--------------------------------------SEGUNDO PAÍS---------------------------------------------------------
         //Sacar información de la tabla de equipos_juegos para el segundo país
+        
         $sql5 = "SELECT * FROM equipos_juegos WHERE id_equipos = '$pais2'";
         $q = $con->query($sql5);
         if ($q->num_rows > 0) {
@@ -232,6 +236,12 @@ if (
     {
      echo "No se ingreso debido a que no se encuentra dentro del rango permitido";
     }
+    }
+    else
+    {
+      echo "Los Equipos Rivales no Pueden ser iguales y los goles no pueden ser negativos";  
+    }
+    
     
     
 } else {
