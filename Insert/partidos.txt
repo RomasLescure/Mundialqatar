@@ -1,4 +1,4 @@
-
+ALTER TABLE `partidos` AUTO_INCREMENT = 1
 
 INSERT INTO `partidos` (`id_partido`, `estadio`, `fecha`, `hora`) 
 VALUES (NULL, 'Al Bayt', '2022-11-20', '17:00');
