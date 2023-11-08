@@ -86,7 +86,7 @@
                     <br>
                     <div class="form-group" id="ifYes" style="display:none">
                         <label for="adminPass" class="form-label mt-4">Contraseña administrativa</label>
-                        <input type="text" class="form-control" name="adminPass" placeholder="Insertar Contraseña">
+                        <input type="password" class="form-control" name="adminPass" placeholder="Insertar Contraseña">
                     </div>
                     <input type="submit" value="Registrarse">
                 </fieldset>

@@ -1,23 +1,55 @@
 <?php
 session_start();
-$db_host = 'localhost';
-$db_user = 'root';
-$db_password = '';
-$db_db = 'datos_mundial';
 
-$con_db = mysqli_connect($db_host, $db_user, $db_password, $db_db);
+// Verificar límite de solicitudes por IP
+$ip = $_SERVER['REMOTE_ADDR'];
+$limit = 5; // Número máximo de solicitudes permitidas
+$interval = 60; // Intervalo de tiempo en segundos (por ejemplo, 60 segundos = 1 minuto)
 
+// Obtener el número de solicitudes realizadas por la IP en el último intervalo de tiempo
+$requests = $_SESSION['requests'][$ip] ?? 0;
+
+// Verificar si se ha excedido el límite de solicitudes
+if ($requests >= $limit) {
+    die("Has excedido el límite de solicitudes. Inténtalo de nuevo más tarde.");
+}
+
+// Incrementar el contador de solicitudes para esta IP
+$_SESSION['requests'][$ip] = $requests + 1;
+
+// Restablecer el contador de solicitudes después del intervalo de tiempo
+if (!isset($_SESSION['reset_time']) || $_SESSION['reset_time'] < time() - $interval) {
+    $_SESSION['requests'] = [];
+    $_SESSION['reset_time'] = time();
+}
+
+// Verificar el formato de la contraseña
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $user = $_POST["user"];
-  $pass = $_POST["pass"];
-  $sql = "SELECT * FROM usuarios WHERE user = '$user' AND pass = '$pass'";
-  $result = $con_db->query($sql);
-  if ($result->num_rows > 0) {
-    $_SESSION["user"] = $user;
-    header("location: inicio.php");
-  } else {
-    echo "Usuario o contraseña invalidos";
-  }
+    $user = $_POST["user"];
+    $pass = $_POST["pass"];
+
+    // Verificar si la contraseña cumple con los criterios (letras mayúsculas, minúsculas, números y al menos 8 caracteres)
+    if (preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,50}$/", $pass)) {
+        // La contraseña cumple con los criterios, proceder con la verificación en la base de datos
+        $db_host = 'localhost';
+        $db_user = 'root';
+        $db_password = '';
+        $db_db = 'datos_mundial';
+
+        $con_db = mysqli_connect($db_host, $db_user, $db_password, $db_db);
+
+        $sql = "SELECT * FROM usuarios WHERE user = '$user' AND pass = '$pass'";
+        $result = $con_db->query($sql);
+
+        if ($result->num_rows > 0) {
+            $_SESSION["user"] = $user;
+            header("location: inicio.php");
+        } else {
+            echo "Usuario o contraseña inválidos";
+        }
+    } else {
+        echo "La contraseña no cumple con los requisitos mínimos de seguridad.";
+    }
 }
 ?>
 
